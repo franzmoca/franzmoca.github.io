@@ -2,12 +2,12 @@
 layout: default
 title: Ethereum Data Channel
 category: portfolio
-modal-id: 4
+modal-id: 6
 img: edc.png
 alt: Etheruem DataChannel POC home page
 client: 
 application: Peer to Peer Web Application for WebRTC communication.
-project-date: August 2018 - Ongoing
+project-date: August 2018 - October 2019
 languages:
 - Javascript
 - HTML5

@@ -17,21 +17,21 @@ about:
       left:
         header: Now
         list:
-          - item: Keycloak
+          - item: R3 Corda
           - item: Kubernetes
-          - item: Go
+          - item: Blockchain Bridges
       center:
         header: Soon
         list:
-          - item: Typescript
-          - item: Self Sovereign Identity
-          - item: xDai / Matic Network
+          - item: VueJS 3
+          - item: Avalanche
+          - item: Algorand
       right:
         header: "Later (?)"
         list:
-          - item: Rust
+          - item: Algorand
           - item: Kotlin
-          - item: Haskell
+          - item: Svelte
   button:
     text: Download My Resume
     href: "/resume/cv_en.pdf"
