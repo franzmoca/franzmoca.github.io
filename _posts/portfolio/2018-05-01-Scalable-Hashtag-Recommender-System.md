@@ -34,7 +34,6 @@ The tool developed is a command line interface that takes as input an image and 
 
 The model built was trained on real data taken from Instagram, for the clustering phase Apache Spark was used for performance reasons.
 
-The project is currently being rewritten for an eventual public release as a service.
 
 ### References
 [Github repository](https://github.com/Rhuax/Scalable-Hashtag-Recommender-System){:target="_blank"}
