@@ -15,9 +15,6 @@ export default function ContactPage() {
         <p>
           The best way to get in touch is by sending an email to: <a href={`mailto:${email}`} className="text-indigo-500 hover:text-indigo-400">{email}</a>
         </p>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-8">
-          (Note: A contact form will be added here later.)
-        </p>
       </section>
     </div>
   );
