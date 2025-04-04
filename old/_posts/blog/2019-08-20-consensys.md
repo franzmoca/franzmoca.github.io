@@ -1,13 +1,20 @@
 ---
-layout: blog_post
-title: Ethereum Developer Program Online Bootcamp 2019.
-category: blog
+
+layout: blog_post  
+title: Ethereum Developer Program Online Bootcamp 2019  
+category: blog  
+tags: [blockchain, smart contracts, Ethereum, online bootcamp, ConsenSys Academy, developer training, decentralized applications, Solidity, blockchain development]
+
 ---
 
-Starting from this spring until this summer I partecipated at an online bootcamp about blockchain and smart contract programming promoted by [ConsenSys Academy](https://consensys.net/academy/){:target="_blank"}.
+From spring to summer 2019, I had the privilege of participating in an intensive online bootcamp focused on blockchain technology and smart contract programming.
 
-It was an educational experience that has definitely enriched my knowledge about the blockchain and smart contract programming.
+This program, organized by [ConsenSys Academy](https://consensys.net/academy/){:target="_blank"}, was a deep dive into the world of decentralized applications (ÐApps) and Ethereum development, offering a perfect blend of theoretical knowledge and hands-on practice.
 
-It was a good mix between theory and practice, you can see my final project in my portfolio section.
+The bootcamp covered a wide range of topics, from the fundamentals of blockchain and the Ethereum platform to the intricacies of writing smart contracts using Solidity. The curriculum was designed to not only impart technical skills but also to encourage an understanding of the broader implications of blockchain technology in various industries.
 
-[Course Certificate](https://francescomoca.ml/files/bc.pdf){:target="_blank"}
+This educational journey significantly expanded my expertise in blockchain development, equipping me with the skills to build decentralized applications and explore innovative solutions in the rapidly evolving field of blockchain.
+
+You can view my final project in the portfolio section of my website, where I applied the concepts and skills learned during the bootcamp.
+
+For verification, here’s a link to my [Course Certificate](https://francescomoca.ml/files/bc.pdf){:target="_blank"}.

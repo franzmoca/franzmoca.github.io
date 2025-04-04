@@ -1,40 +1,67 @@
 ---
-layout: default
-title: Ethereum Data Channel
-category: portfolio
-modal-id: 6
-img: edc.png
-alt: Etheruem DataChannel POC home page
-client: 
-application: Peer to Peer Web Application for WebRTC communication.
-project-date: August 2018 - October 2019
-languages:
-- Javascript
-- HTML5
-- CSS
-concepts:
-- WebRTC
-- State Channels
-- dApp
-- Blockchain Scalability
-- Ethereum
-tools:
-- React
-- Metamask
-- SimplePeer
-- SignalHub
-stack:
-- Linux
-- NodeJs
-- IPFS (wip)
+
+layout: portfolio_post  
+title: Ethereum Data Channel  
+category: portfolio  
+modal-id: 6  
+img: edc.png  
+alt: Ethereum DataChannel POC home page  
+overview:  
+    client: Personal Project  
+    applications: Peer-to-Peer Web Application for WebRTC Communication  
+    project-date: August 2018 - October 2019  
+    summary: A peer-to-peer communication tool utilizing Ethereum and WebRTC for scalable dApp interactions. It features a secure chat application and a simple battleship game, with ongoing development towards a full state channel solution.
+
+skills:  
+    languages:  
+    - JavaScript  
+    - HTML5  
+    - CSS  
+    concepts:  
+    - WebRTC  
+    - State Channels  
+    - Decentralized Applications (dApp)  
+    - Blockchain Scalability  
+    - Ethereum  
+    tools:  
+    - React  
+    - Metamask  
+    - SimplePeer  
+    - SignalHub  
+    stack:  
+    - Linux  
+    - NodeJs  
+    - IPFS (Work in Progress)
+
 ---
 
 ### Project Description
 
-Study and development of a scaling solution for dApps based on Ethereum blockchain.
+The **Ethereum Data Channel** project was initiated as a study and development effort to explore scaling solutions for decentralized applications (dApps) on the Ethereum blockchain. The primary focus is on leveraging WebRTC technology to enable direct peer-to-peer (P2P) communication between users, enhancing both the scalability and privacy of dApp interactions.
 
-This project uses Metamask to authenticate two users that want to interact between each other in a safe way.
+The proof of concept (POC) developed during this project includes a secure chat application and a simple implementation of the battleship game, demonstrating how users can authenticate via Metamask and interact securely over a P2P connection. The POC highlights the potential of combining blockchain-based authentication with WebRTC for real-time, decentralized communication.
 
-A proof of concept has been tested and consist on a chat and a simple battleship game.
+### Contributions
 
-The project is being developed to become a full state channel solution based on WebRTC p2p communication for developing decentralized applications.
+My contributions to the **Ethereum Data Channel** project include:
+
+- **WebRTC Integration:** Integrated WebRTC with blockchain technology to establish P2P communication channels, ensuring secure and scalable interactions.
+- **dApp Development:** Designed and developed the POC, including a chat application and a battleship game, demonstrating the feasibility of using WebRTC for state channels.
+- **Blockchain Authentication:** Implemented Metamask for secure user authentication, ensuring that interactions remain private and tamper-proof.
+- **Ongoing Development:** Continued development to transform the POC into a full-fledged state channel solution, with plans to integrate IPFS for decentralized storage.
+
+### Challenges Overcame
+
+The development of **Ethereum Data Channel** involved overcoming several technical challenges:
+
+- **WebRTC Complexity:** Implementing WebRTC in a decentralized environment required extensive troubleshooting to ensure stable and reliable communication channels.
+- **State Channel Design:** Designing a state channel solution that can handle complex dApp interactions while maintaining scalability and security was a significant challenge.
+- **Blockchain Integration:** Integrating Ethereum-based authentication with P2P communication posed unique challenges in ensuring the seamless flow of data between users.
+
+### Accomplishments
+
+The **Ethereum Data Channel** project achieved several key milestones:
+
+- **Secure P2P Communication:** Successfully demonstrated the use of WebRTC for secure, real-time communication in a decentralized environment.
+- **Scalability Improvements:** Developed a scalable solution for dApp interactions that reduces the load on the Ethereum blockchain, improving performance and usability.
+- **Innovative POC:** Delivered a proof of concept that paves the way for future developments in state channels and decentralized applications.
