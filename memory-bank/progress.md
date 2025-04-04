@@ -72,6 +72,17 @@ This file tracks the project's progress using a task list format.
 
 * [X] Implement basic SEO (Metadata API via `generateMetadata` in layouts/pages).
 
+
+## Completed Tasks (Content Migration)
+
+* [X] Create image directories (`site/public/images/blog`, `site/public/images/portfolio`).
+* [X] Copy portfolio images (`old/img/portfolio/*` to `site/public/images/portfolio/`).
+* [X] Migrate blog posts (`old/_posts/blog/*.md` to `site/content/blog/*.mdx`).
+* [X] Migrate portfolio items (`old/_posts/portfolio/*.md` to `site/content/portfolio/*.mdx`).
+* [X] Create files directory (`site/public/files`).
+* [X] Copy referenced PDF files (`old/files/*.pdf` to `site/public/files/`).
+* [X] Verify migration (Started dev server, user confirmed completion).
+
 ## Next Steps
 
 * Test across browsers/devices.

@@ -7,11 +7,14 @@
 
 ## Current Focus
 
-* Initial planning and information gathering for website redesign.
-* Defining project scope and technology choices.
+* [2025-04-04 04:44] Verify migrated content rendering on dev server.
+* [2025-04-04 04:44] Test site functionality across browsers/devices.
+* [2025-04-04 04:44] Commit migrated content and related changes to Git.
+* [2025-04-04 04:44] Push changes to trigger deployment.
 
 ## Recent Changes
 
+* [2025-04-04 04:44] Completed migration of content (blog posts, portfolio items, images, PDFs) from `old/` to `site/`.
 * Initialized Memory Bank.
 * Created `productContext.md`.
 
