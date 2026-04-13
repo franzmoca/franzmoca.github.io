@@ -1,0 +1,369 @@
+---
+// Standalone page — no BaseLayout, fully self-contained white document
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Francesco Moca — CV</title>
+    <meta name="description" content="CV of Francesco Moca, Blockchain & Full-Stack Developer." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 10.5pt;
+        line-height: 1.55;
+        color: #111;
+        background: #f0f0ef;
+      }
+
+      a { color: #1d4ed8; text-decoration: none; }
+
+      /* ── Site nav (screen only) ── */
+      .site-nav {
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 10px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        font-size: 13px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      .site-nav a { color: #555; }
+      .site-nav a:hover { color: #111; }
+      .dl-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: #111;
+        color: #fff !important;
+        padding: 6px 14px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        white-space: nowrap;
+      }
+      .dl-btn:hover { background: #333; }
+
+      /* ── Page wrapper (A4-ish) ── */
+      .page {
+        width: 794px;
+        min-height: 1123px;
+        background: #fff;
+        margin: 32px auto;
+        padding: 52px 56px 56px;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+      }
+
+      /* ── Header ── */
+      .cv-name {
+        font-size: 22pt;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        color: #0f0f0f;
+        margin-bottom: 3px;
+      }
+      .cv-title {
+        font-size: 11pt;
+        color: #444;
+        margin-bottom: 8px;
+      }
+      .cv-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px 18px;
+        font-size: 9pt;
+        color: #555;
+      }
+      .cv-contact a { color: #555; }
+
+      /* ── Section ── */
+      .section { margin-top: 22px; }
+      .section-title {
+        font-size: 7.5pt;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #888;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #e8e8e8;
+      }
+
+      /* ── Experience entries ── */
+      .exp-entry { margin-bottom: 18px; }
+      .exp-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8px;
+        margin-bottom: 1px;
+      }
+      .exp-company {
+        font-size: 10.5pt;
+        font-weight: 600;
+        color: #0f0f0f;
+      }
+      .exp-period {
+        font-size: 9pt;
+        color: #777;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      .exp-role {
+        font-size: 9.5pt;
+        color: #555;
+        margin-bottom: 7px;
+      }
+      .exp-body {
+        font-size: 9.5pt;
+        color: #333;
+        line-height: 1.6;
+        margin-bottom: 7px;
+      }
+      .exp-body ul {
+        padding-left: 14px;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+      .exp-stack {
+        font-size: 8.5pt;
+        color: #777;
+      }
+      .exp-stack strong { color: #555; font-weight: 600; }
+
+      /* ── Skills ── */
+      .skills-table { width: 100%; border-collapse: collapse; }
+      .skills-table td {
+        font-size: 9.5pt;
+        padding: 3px 0;
+        vertical-align: top;
+      }
+      .skills-table td:first-child {
+        width: 120px;
+        color: #888;
+        font-weight: 500;
+        padding-right: 12px;
+        white-space: nowrap;
+      }
+      .skills-table td:last-child { color: #333; }
+
+      /* ── Education ── */
+      .edu-entry { margin-bottom: 10px; }
+      .edu-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8px;
+      }
+      .edu-degree { font-size: 9.5pt; font-weight: 600; color: #0f0f0f; }
+      .edu-school { font-size: 9pt; color: #555; }
+      .edu-note { font-size: 8.5pt; color: #888; margin-top: 1px; }
+
+      /* ── Certs / Languages (two-column) ── */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 32px;
+      }
+      .cert-entry { margin-bottom: 7px; }
+      .cert-name { font-size: 9.5pt; font-weight: 600; color: #0f0f0f; }
+      .cert-meta { font-size: 8.5pt; color: #888; }
+
+      .lang-entry { margin-bottom: 5px; display: flex; gap: 10px; align-items: baseline; }
+      .lang-name { font-size: 9.5pt; font-weight: 600; color: #0f0f0f; min-width: 56px; }
+      .lang-level { font-size: 9pt; color: #555; }
+
+      /* ── Print ── */
+      @media print {
+        body { background: #fff; }
+        .site-nav { display: none; }
+        .page {
+          width: 100%; margin: 0; padding: 0;
+          box-shadow: none; min-height: unset;
+        }
+        a { color: inherit; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="site-nav">
+      <a href="/">← francescomoca.ml</a>
+      <a href="/documents/cv.pdf" download class="dl-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download PDF
+      </a>
+    </nav>
+
+    <div class="page">
+
+      <!-- Header -->
+      <header>
+        <h1 class="cv-name">Francesco Moca</h1>
+        <p class="cv-title">Blockchain &amp; Full-Stack Developer &nbsp;·&nbsp; Milan, Italy</p>
+        <div class="cv-contact">
+          <a href="mailto:francesco.moca@gmail.com">francesco.moca@gmail.com</a>
+          <a href="https://github.com/franzmoca">github.com/franzmoca</a>
+          <a href="https://linkedin.com/in/francesco-moca-69001a121">linkedin.com/in/francesco-moca</a>
+          <a href="https://francescomoca.ml">francescomoca.ml</a>
+        </div>
+      </header>
+
+      <!-- Summary -->
+      <section class="section">
+        <h2 class="section-title">Summary</h2>
+        <p class="exp-body" style="margin:0">
+          Blockchain and full-stack developer with 5+ years of professional experience delivering
+          enterprise distributed-ledger applications. Deep expertise across the full project lifecycle —
+          technical analysis, smart contract development, Java/Spring Boot backends, Vue.js frontends,
+          and cloud infrastructure. Comfortable working in both delivery and architecture roles, and
+          experienced leading small teams on complex projects.
+        </p>
+      </section>
+
+      <!-- Experience -->
+      <section class="section">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="exp-entry">
+          <div class="exp-row">
+            <span class="exp-company">Blockchain Reply</span>
+            <span class="exp-period">Mar 2020 – Present</span>
+          </div>
+          <p class="exp-role">Blockchain &amp; Full-Stack Developer &nbsp;·&nbsp; Milan, Italy</p>
+          <div class="exp-body">
+            <p>
+              Designed and delivered 13+ enterprise blockchain applications for clients in financial
+              services, energy, insurance, supply chain, and digital entertainment. Operated in roles
+              spanning full-stack developer, technical lead, and on-site blockchain architect,
+              depending on project phase and scope.
+            </p>
+            <ul>
+              <li>Wrote smart contracts in <strong>Solidity</strong> (ERC-20, ERC-721, AMM / Uniswap v3 forks, security tokens), <strong>Go chaincode</strong> (Hyperledger Fabric), and <strong>PyTeal</strong> (Algorand ASA-020), deploying across Polygon, Hyperledger Besu, Hyperledger Fabric, R3 Corda, and Algorand mainnet and testnets.</li>
+              <li>Built <strong>Java / Spring Boot</strong> backends — REST APIs, event listeners, and integration layers — for token lifecycle management, DeFi exchange operations, and digital asset issuance platforms.</li>
+              <li>Developed <strong>Vue.js 2/3</strong> web frontends for institutional and consumer-facing products, including a permissioned DEX dashboard, NFT marketplaces, and energy-asset tokenisation portals.</li>
+              <li>Integrated institutional custody solutions — <strong>Gnosis Safe</strong> multisig and <strong>Fireblocks</strong> — enabling segregated vault management for regulated financial products.</li>
+              <li>Orchestrated <strong>Hyperledger Fabric</strong> networks on <strong>Kubernetes / AWS EKS</strong>; managed infrastructure-as-code with Terraform and CloudFormation.</li>
+              <li>Acted as on-site blockchain architect at a major payments provider, documenting solution architectures and overseeing migration of a production <strong>R3 Corda</strong> network (Italian interbank reconciliation system).</li>
+              <li>Led technical analysis phases, authored architecture documents, mentored junior developers, and contributed to pre-sales technical proposals.</li>
+            </ul>
+          </div>
+          <p class="exp-stack">
+            <strong>Stack:</strong> Java 8/11/17 · Spring Boot · Go · TypeScript · Solidity · PyTeal · Vue.js 2/3 · Quasar · Vuetify · PostgreSQL · Keycloak · Kubernetes · AWS · Terraform · Docker · R3 Corda · Hyperledger Fabric/Besu · Algorand · Polygon · Gnosis Safe · Fireblocks
+          </p>
+        </div>
+
+        <div class="exp-entry">
+          <div class="exp-row">
+            <span class="exp-company">Freelance Developer</span>
+            <span class="exp-period">Sep 2016 – Feb 2020</span>
+          </div>
+          <p class="exp-role">Blockchain &amp; Mobile Developer &nbsp;·&nbsp; Remote</p>
+          <div class="exp-body">
+            <p>
+              Delivered client projects alongside university studies, including an ERC-721 smart contract
+              system with a React web dashboard and React Native mobile app for NFT-based product
+              authenticity (Ethereum), and a cross-platform board game companion app published on
+              the iOS App Store and Google Play, maintained through multiple releases.
+            </p>
+          </div>
+          <p class="exp-stack">
+            <strong>Stack:</strong> Solidity · React · React Native · Ionic · AngularJS · TypeScript · Ethereum
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section">
+        <h2 class="section-title">Skills</h2>
+        <table class="skills-table">
+          <tbody>
+            <tr><td>Languages</td><td>Java · Go · TypeScript · JavaScript · Solidity · PyTeal</td></tr>
+            <tr><td>Backend</td><td>Spring Boot · Hibernate · Node.js · Keycloak</td></tr>
+            <tr><td>Frontend</td><td>Vue.js 2/3 · React · React Native · Quasar · Vuetify · Ionic</td></tr>
+            <tr><td>Blockchain</td><td>Ethereum / EVM · Algorand · Hyperledger Fabric · Hyperledger Besu · R3 Corda · Polygon · Gnosis Safe · Fireblocks</td></tr>
+            <tr><td>Infrastructure</td><td>Kubernetes · AWS (ECS, EKS) · Terraform · CloudFormation · Jenkins · Ansible · Docker</td></tr>
+            <tr><td>Data</td><td>PostgreSQL</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Education -->
+      <section class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="edu-entry">
+          <div class="edu-row">
+            <span class="edu-degree">Master's Degree in Computer Science (Software Techniques)</span>
+            <span class="exp-period">2016 – 2019</span>
+          </div>
+          <p class="edu-school">University of Bologna &nbsp;·&nbsp; <strong>110/110 con lode</strong></p>
+          <p class="edu-note">
+            Thesis: <em>Pig — A State Channel Game on Ethereum</em>. Implemented the dice game Pig as a
+            trustless Layer 2 application using counterfactual instantiation: players exchange signed
+            state updates off-chain and settle only the final outcome on-chain, reducing blockchain
+            interactions to two transactions per game regardless of length.
+          </p>
+        </div>
+        <div class="edu-entry">
+          <div class="edu-row">
+            <span class="edu-degree">Bachelor's Degree in Computer Science</span>
+            <span class="exp-period">2013 – 2016</span>
+          </div>
+          <p class="edu-school">University of Perugia &nbsp;·&nbsp; <strong>105/110</strong></p>
+          <p class="edu-note">
+            Thesis: <em>Blockchain: gestione di Big Data</em>. Analysis of the Bitcoin blockchain as a
+            large-scale distributed data structure, with an interactive force-directed visualisation
+            of transaction graphs built in D3.js to explore value-flow patterns between addresses.
+          </p>
+        </div>
+      </section>
+
+      <!-- Certifications + Languages -->
+      <section class="section">
+        <h2 class="section-title">Certifications &amp; Languages</h2>
+        <div class="two-col">
+          <div>
+            <div class="cert-entry">
+              <p class="cert-name">Professional Scrum Developer I (PSD I)</p>
+              <p class="cert-meta">Scrum.org &nbsp;·&nbsp; 2022</p>
+            </div>
+            <div class="cert-entry">
+              <p class="cert-name">Ethereum Developer Program Bootcamp</p>
+              <p class="cert-meta">ConsenSys Academy &nbsp;·&nbsp; 2019</p>
+            </div>
+          </div>
+          <div>
+            <div class="lang-entry">
+              <span class="lang-name">Italian</span>
+              <span class="lang-level">Native</span>
+            </div>
+            <div class="lang-entry">
+              <span class="lang-name">English</span>
+              <span class="lang-level">Professional — advanced written, intermediate spoken</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </body>
+</html>

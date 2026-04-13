@@ -1,0 +1,63 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/about', label: 'About' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header style="border-bottom: 1px solid var(--color-border)">
+  <nav class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="/" class="font-mono text-sm font-medium" style="color: var(--color-text)">
+      fm<span style="color: var(--color-accent)">.</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0">
+      {navLinks.map(({ href, label }) => (
+        <li>
+          <a
+            href={href}
+            class="text-sm transition-colors"
+            style={currentPath === href || (href !== '/' && currentPath.startsWith(href))
+              ? 'color: var(--color-text)'
+              : 'color: var(--color-text-muted)'}
+            aria-current={currentPath === href ? 'page' : undefined}
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Mobile nav -->
+    <details class="sm:hidden relative">
+      <summary class="cursor-pointer list-none p-1" style="color: var(--color-text-muted)"
+        aria-label="Open navigation menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </summary>
+      <ul class="absolute right-0 top-8 w-40 rounded-lg py-1 list-none m-0 z-50"
+        style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: 0 8px 24px rgba(0,0,0,0.4)">
+        {navLinks.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class="block px-4 py-2 text-sm transition-colors"
+              style="color: var(--color-text-muted)"
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </details>
+  </nav>
+</header>

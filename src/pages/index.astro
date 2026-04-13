@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import BlogPostCard from '../components/BlogPostCard.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const featuredProjects = allProjects
+  .filter((p) => p.data.featured)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 4);
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const latestPosts = allPosts
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 3);
+---
+
+<BaseLayout title="Home" description="Full-Stack Developer based in Milan, Italy. Building web apps and exploring decentralized systems.">
+  <Hero />
+
+  <!-- Featured projects -->
+  <section class="max-w-5xl mx-auto px-6 pb-20">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-xl font-semibold" style="color: var(--color-text)">Selected Projects</h2>
+      <a href="/projects" class="text-sm transition-colors" style="color: var(--color-text-muted)">
+        All projects →
+      </a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {featuredProjects.map((project) => (
+        <ProjectCard
+          title={project.data.title}
+          description={project.data.description}
+          date={project.data.date}
+          tags={project.data.tags}
+          links={project.data.links}
+          featured={project.data.featured}
+        />
+      ))}
+    </div>
+  </section>
+
+  <!-- Latest posts -->
+  {latestPosts.length > 0 && (
+    <section class="max-w-5xl mx-auto px-6 pb-20">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-xl font-semibold" style="color: var(--color-text)">Latest Posts</h2>
+        <a href="/blog" class="text-sm transition-colors" style="color: var(--color-text-muted)">
+          All posts →
+        </a>
+      </div>
+      <div class="flex flex-col gap-3">
+        {latestPosts.map((post) => (
+          <BlogPostCard
+            title={post.data.title}
+            description={post.data.description}
+            date={post.data.date}
+            slug={post.id}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Contact prompt -->
+  <section class="max-w-5xl mx-auto px-6 pb-24">
+    <div
+      class="rounded-xl p-8 text-center"
+      style="background: var(--color-bg-card); border: 1px solid var(--color-border)"
+    >
+      <h2 class="text-xl font-semibold mb-3" style="color: var(--color-text)">Get in touch</h2>
+      <p class="text-sm mb-5 max-w-md mx-auto" style="color: var(--color-text-muted)">
+        Interested in working together or just want to say hi? My inbox is open.
+      </p>
+      <a
+        href="mailto:francesco.moca@gmail.com"
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors"
+        style="background: var(--color-accent); color: #000"
+      >
+        Send an email
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+          aria-hidden="true">
+          <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const skills = {
+  'Languages': ['Java', 'Go', 'TypeScript', 'JavaScript', 'Solidity', 'PyTeal'],
+  'Backend': ['Spring Boot', 'Hibernate', 'Node.js', 'Keycloak'],
+  'Frontend': ['Vue.js', 'React', 'React Native', 'Quasar', 'Vuetify', 'Ionic'],
+  'Blockchain': ['Ethereum / EVM', 'Algorand', 'Hyperledger Fabric', 'Hyperledger Besu', 'R3 Corda', 'Polygon', 'Gnosis Safe', 'Fireblocks'],
+  'Infrastructure': ['Kubernetes', 'AWS (ECS, EKS)', 'Terraform', 'CloudFormation', 'Jenkins', 'Ansible', 'Docker'],
+  'Data': ['PostgreSQL'],
+};
+---
+
+<BaseLayout
+  title="About"
+  description="About Francesco Moca — Blockchain & Full-Stack Developer based in Milan, Italy."
+>
+  <div class="max-w-2xl mx-auto px-6 py-16">
+    <header class="mb-12">
+      <h1 class="text-3xl font-semibold mb-3" style="color: var(--color-text)">About</h1>
+    </header>
+
+    <div class="flex flex-col gap-6 text-base leading-relaxed" style="color: var(--color-text-muted)">
+      <p>
+        I'm Francesco, a Blockchain & Full-Stack Developer based in Milan, Italy. I work
+        at <strong style="color: var(--color-text)">Blockchain Reply</strong>, where I've
+        spent the past five years designing and building enterprise blockchain applications
+        for clients across finance, energy, insurance, and supply chain.
+      </p>
+      <p>
+        My day-to-day spans the full stack: smart contracts in Solidity, Go, or PyTeal;
+        Java backends with Spring Boot; Vue.js frontends; and the infrastructure to run
+        it all on Kubernetes and AWS. I've deployed to most major blockchain platforms —
+        Ethereum-compatible chains (Polygon, Hyperledger Besu), Hyperledger Fabric,
+        R3 Corda, and Algorand — and have worked extensively with
+        institutional-grade custody solutions like Gnosis Safe and Fireblocks.
+      </p>
+      <p>
+        Before joining Reply I completed a master's thesis on state channel games as
+        an Ethereum Layer 2 scaling approach, finished the ConsenSys Academy Ethereum
+        Developer Bootcamp, and shipped a few freelance blockchain and mobile projects.
+      </p>
+      <p>
+        Outside of engineering I'm interested in how decentralised systems interact with
+        regulation and real-world institutions. Lately I've been writing a bit, which
+        is what the blog is for.
+      </p>
+    </div>
+
+    <!-- Skills -->
+    <div class="mt-12">
+      <h2 class="text-lg font-semibold mb-6" style="color: var(--color-text)">Technologies</h2>
+      <div class="flex flex-col gap-5">
+        {Object.entries(skills).map(([category, items]) => (
+          <div>
+            <p class="text-xs font-mono uppercase tracking-wider mb-2" style="color: var(--color-text-muted)">{category}</p>
+            <div class="flex flex-wrap gap-2">
+              {items.map((skill) => (
+                <span
+                  class="text-sm px-3 py-1 rounded font-mono"
+                  style="background: var(--color-bg-card); border: 1px solid var(--color-border); color: var(--color-text-muted)"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CV -->
+    <div class="mt-12 pt-10" style="border-top: 1px solid var(--color-border)">
+      <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">CV</h2>
+      <p class="text-sm mb-5" style="color: var(--color-text-muted)">
+        Full work history, skills, and education.
+      </p>
+      <div class="flex items-center gap-3">
+        <a
+          href="/cv"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors"
+          style="background: var(--color-accent); color: #000"
+        >
+          View CV
+        </a>
+        <a
+          href="/documents/cv.pdf"
+          download
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors"
+          style="background: var(--color-bg-card); border: 1px solid var(--color-border); color: var(--color-text)"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="mt-12">
+      <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">Contact</h2>
+      <p class="text-sm mb-5" style="color: var(--color-text-muted)">
+        The best way to reach me is by email or LinkedIn.
+      </p>
+      <div class="flex flex-wrap items-center gap-5">
+        <a
+          href="mailto:francesco.moca@gmail.com"
+          class="text-sm font-medium transition-colors"
+          style="color: var(--color-accent)"
+        >
+          francesco.moca@gmail.com
+        </a>
+        <a
+          href="https://github.com/franzmoca"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium transition-colors"
+          style="color: var(--color-text-muted)"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/francesco-moca-69001a121/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-medium transition-colors"
+          style="color: var(--color-text-muted)"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

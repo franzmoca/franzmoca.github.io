@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostCard from '../../components/BlogPostCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const sortedPosts = posts.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<BaseLayout
+  title="Blog"
+  description="Writing about software development, blockchain, and things I find interesting."
+>
+  <div class="max-w-2xl mx-auto px-6 py-16">
+    <header class="mb-12">
+      <h1 class="text-3xl font-semibold mb-3" style="color: var(--color-text)">Blog</h1>
+      <p class="text-base" style="color: var(--color-text-muted)">
+        Occasional writing on software, blockchain, and whatever I'm currently exploring.
+      </p>
+    </header>
+
+    {sortedPosts.length === 0 ? (
+      <p style="color: var(--color-text-muted)">No posts yet — check back soon.</p>
+    ) : (
+      <div class="flex flex-col gap-3">
+        {sortedPosts.map((post) => (
+          <BlogPostCard
+            title={post.data.title}
+            description={post.data.description}
+            date={post.data.date}
+            slug={post.id}
+            tags={post.data.tags}
+          />
+        ))}
+      </div>
+    )}
+  </div>
+</BaseLayout>
