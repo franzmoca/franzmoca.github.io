@@ -1,11 +1,15 @@
 ---
-title: "Redesigning my website with Claude, then iterating with Codex"
+title: "Redesigning my website using agents"
 date: 2026-04-14
-description: "After five years without touching it, I rebuilt this site with Astro 6, then used a second agent pass to turn the scaffold into a sharper portfolio."
+description: "I had wanted to redesign this site for years, but only recent agent workflows finally made the tedious parts easy enough for me to finish it."
 tags: ["meta", "astro", "claude", "codex", "web"]
 ---
 
-My previous website was a Jekyll site I hadn't meaningfully touched since 2021. Bootstrap 3, jQuery 1.11, a Freelancer theme fork, and a `.ml` domain that somehow still works. It did the job, but every time I thought about adding a blog post I had to fight through five years of accumulated dust first.
+I had wanted to redesign this website for a long time, mostly because the old one had become a graveyard of postponed intentions. It was a Jekyll site I had not meaningfully touched since 2021: Bootstrap 3, jQuery 1.11, a Freelancer theme fork, and a `.ml` domain that somehow still works.
+
+The annoying part is that I had already tried to redo it twice and gave up both times. I also wanted to add more content and start blogging more consistently, but I never found the time or motivation to push through all the boring parts: migration, cleanup, rewriting old content, rebuilding the structure, fixing styles, and getting everything deployed again.
+
+What finally changed is that agent-based workflows got good enough that the tedious part stopped being the blocker. With harnesses and models like Opus 4.6 and GPT-5.4, it became realistic to offload the repetitive implementation work and keep my attention on the parts I actually cared about.
 
 So I finally rebuilt it. The stack is [Astro 6.1](https://astro.build/) with Tailwind CSS v4, deployed to GitHub Pages via Actions. Clean content collections for projects and blog posts, an RSS feed, and no more jQuery.
 
@@ -32,6 +36,6 @@ The most useful change was editorial, not technical. Several older projects were
 
 ## The result
 
-The site now feels like something I'll actually maintain. Writing a new blog post is creating a `.md` file in `src/content/blog/` — nothing else. The old "Recent Interests" section (R3 Corda, Kubernetes, Algorand — from 2021) is gone. The projects are now proper case studies instead of modal popups or one-line placeholders, which makes the site much closer to an actual portfolio than a cleaned-up archive.
+The site now feels like something I'll actually maintain. Writing a new blog post is creating a `.md` file in `src/content/blog/` and moving on. The old "Recent Interests" section (R3 Corda, Kubernetes, Algorand — from 2021) is gone. The projects are now proper case studies instead of modal popups or one-line placeholders, which makes the site much closer to an actual portfolio than a cleaned-up archive.
 
-The tools made the migration and the follow-up iteration fast enough that I had no excuse not to do it.
+More importantly, the tools changed my motivation. I had wanted a site where I could publish more often, but I kept postponing the work because every update felt heavier than it should have. Now that the setup is simpler and the tedious parts are easier to delegate, I am much more likely to actually use it.
