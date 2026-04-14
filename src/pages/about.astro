@@ -2,72 +2,79 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const skills = {
-  'Languages': ['Java', 'Go', 'TypeScript', 'JavaScript', 'Solidity', 'PyTeal'],
-  'Backend': ['Spring Boot', 'Hibernate', 'Node.js', 'Keycloak'],
-  'Frontend': ['Vue.js', 'React', 'React Native', 'Quasar', 'Vuetify', 'Ionic'],
+  'Languages': ['Java', 'Go', 'Python', 'TypeScript', 'JavaScript', 'Solidity', 'PyTeal'],
+  'Backend': ['Spring Boot', 'Node.js', 'Go', 'Python', 'Keycloak', 'Serverless Framework'],
+  'Frontend': ['Vue.js', 'React', 'Next.js', 'React Native', 'Quasar', 'Vuetify', 'Ionic'],
   'Blockchain': ['Ethereum / EVM', 'Algorand', 'Hyperledger Fabric', 'Hyperledger Besu', 'R3 Corda', 'Polygon', 'Gnosis Safe', 'Fireblocks'],
-  'Infrastructure': ['Kubernetes', 'AWS (ECS, EKS)', 'Terraform', 'CloudFormation', 'Jenkins', 'Ansible', 'Docker'],
+  'Infrastructure': ['Kubernetes', 'AWS (ECS, EKS, Lambda)', 'Terraform', 'CloudFormation', 'Jenkins', 'GitLab CI', 'GitHub Actions', 'Ansible', 'Docker'],
   'Data': ['PostgreSQL'],
 };
 ---
 
 <BaseLayout
   title="About"
-  description="About Francesco Moca — Blockchain & Full-Stack Developer based in Milan, Italy."
+  description="About Francesco Moca — Full-stack developer and IT consultant based in Milan, Italy."
 >
   <div class="max-w-2xl mx-auto px-6 py-16">
     <header class="mb-12">
       <h1 class="text-3xl font-semibold mb-3" style="color: var(--color-text)">About</h1>
       <p class="text-base max-w-xl" style="color: var(--color-text-muted)">
-        I work at the intersection of product delivery, distributed systems, and the tooling engineers use to ship faster without lowering the bar.
+        I work across full-stack delivery, enterprise systems, and the operational constraints that turn prototypes into real products.
       </p>
     </header>
 
     <div class="flex flex-col gap-6 text-base leading-relaxed" style="color: var(--color-text-muted)">
       <p>
-        I'm Francesco, a Blockchain & Full-Stack Developer based in Milan, Italy. I work
-        at <strong style="color: var(--color-text)">Blockchain Reply</strong>, where I've
-        spent the past five years designing and building enterprise blockchain applications
-        for clients across finance, energy, insurance, and supply chain.
+        I'm Francesco, a full-stack developer and IT consultant based in Milan, Italy. I work
+        at <strong style="color: var(--color-text)">Blockchain Reply</strong>, where I have
+        spent the past five years building enterprise software, including blockchain applications,
+        for clients across finance, energy, insurance, supply chain, and payments.
       </p>
       <p>
-        My day-to-day spans the full stack: smart contracts in Solidity, Go, or PyTeal;
-        Java backends with Spring Boot; Vue.js frontends; and the infrastructure to run
-        it all on Kubernetes and AWS. I've deployed to most major blockchain platforms —
-        Ethereum-compatible chains (Polygon, Hyperledger Besu), Hyperledger Fabric,
-        R3 Corda, and Algorand — and have worked extensively with
-        institutional-grade custody solutions like Gnosis Safe and Fireblocks.
+        My scope usually spans backend APIs, frontend interfaces, smart contracts, and DevOps,
+        plus the analysis and coordination work needed to get a project over the line. Depending
+        on the phase, I might be writing code, shaping a solution with the client, supporting delivery,
+        or helping a team keep architecture and implementation aligned.
       </p>
       <p>
-        Before joining Reply I completed a master's thesis on state channel games as
-        an Ethereum Layer 2 scaling approach, finished the ConsenSys Academy Ethereum
-        Developer Bootcamp, and shipped a few freelance blockchain and mobile projects.
+        Technically, that has meant Java / Spring Boot backends, Go and Python services, Vue, React,
+        and Next.js frontends, Solidity, Go chaincode, PyTeal, Kubernetes, AWS, serverless deployments,
+        and several blockchain platforms including EVM chains, Hyperledger Fabric, Hyperledger Besu,
+        R3 Corda, and Algorand, along with custody and operational tooling such as Gnosis Safe and Fireblocks.
+        On the delivery side, DevOps for me has also meant curating CI/CD pipelines, release flows, and project
+        automation through tools such as Jenkins, GitLab CI, and GitHub Actions.
       </p>
       <p>
-        What keeps me interested is the messy part where software leaves the lab: compliance constraints,
-        operational complexity, awkward user flows, team coordination, and the need to keep the whole thing
-        understandable for the next engineer touching it.
+        Before Reply, I completed a master's thesis on Ethereum state channels, finished the ConsenSys
+        Academy bootcamp, and built a mix of freelance blockchain and mobile projects. More recently I
+        have also been exploring smaller experiments around LLM workflows, coding agents, and lightweight
+        developer-facing tools. What keeps me interested is the messy part where software leaves the lab:
+        compliance constraints, operational complexity, awkward user flows, production incidents, team
+        coordination, and the need to keep the whole thing understandable for the next person touching it.
       </p>
     </div>
 
     <div class="grid gap-4 sm:grid-cols-3 mt-12">
       <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
         <p class="text-xs font-mono uppercase tracking-wider mb-2" style="color: var(--color-text-muted)">Experience</p>
-        <p class="text-sm leading-relaxed" style="color: var(--color-text)">5+ years delivering enterprise software across regulated industries.</p>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text)">5+ years delivering enterprise software in regulated and technically complex environments.</p>
       </div>
       <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
         <p class="text-xs font-mono uppercase tracking-wider mb-2" style="color: var(--color-text-muted)">Scope</p>
-        <p class="text-sm leading-relaxed" style="color: var(--color-text)">Architecture, implementation, deployment, and the glue between teams.</p>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text)">Backend, frontend, smart contracts, DevOps, and the coordination between teams and clients.</p>
       </div>
       <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
         <p class="text-xs font-mono uppercase tracking-wider mb-2" style="color: var(--color-text-muted)">Bias</p>
-        <p class="text-sm leading-relaxed" style="color: var(--color-text)">Practical systems, clear interfaces, and workflows that stay maintainable.</p>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text)">Practical systems, clear interfaces, and delivery workflows that remain maintainable under pressure.</p>
       </div>
     </div>
 
     <!-- Skills -->
     <div class="mt-12">
-      <h2 class="text-lg font-semibold mb-6" style="color: var(--color-text)">Technologies</h2>
+      <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">Selected Technologies</h2>
+      <p class="text-sm mb-6" style="color: var(--color-text-muted)">
+        The stack below is not exhaustive, but it covers the platforms and tools I have used most often in recent years.
+      </p>
       <div class="flex flex-col gap-5">
         {Object.entries(skills).map(([category, items]) => (
           <div>
@@ -91,15 +98,18 @@ const skills = {
       <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">LLMs & Agentic Workflows</h2>
       <div class="flex flex-col gap-5 text-base leading-relaxed" style="color: var(--color-text-muted)">
         <p>
-          I’m increasingly interested in how LLMs change software delivery when they are treated as part of the engineering system,
-          not as a novelty layer on top of it. The useful questions for me are about workflow design, quality boundaries,
-          and how much intent can be captured before implementation starts.
+          I’m interested in LLMs less as chat interfaces and more as part of the delivery workflow. The useful work,
+          for me, is in shaping tasks, constraints, review boundaries, and handoffs so model output can become something
+          a real team can actually use.
         </p>
         <p>
-          That pulls me toward <strong style="color: var(--color-text)">agentic coding</strong>,
+          I’ve explored that through small projects and experiments: an early app that turned article collections into AI-generated
+          podcast episodes, this website redesign iterated with coding agents, and small tooling such as
+          <strong style="color: var(--color-text)"> opencode-lombok</strong>. That keeps pulling me toward
+          <strong style="color: var(--color-text)"> agentic coding</strong>,
           <strong style="color: var(--color-text)"> spec-driven development</strong>, and repeatable automations:
-          reusable skills, task scaffolding, codebase-specific prompts, and lightweight internal workflows that help teams move faster
-          while keeping reviewable outputs and clear human ownership.
+          reusable skills, task scaffolding, codebase-specific prompts, and lightweight workflows that help teams move faster
+          without hiding ownership or lowering the review bar.
         </p>
       </div>
 
@@ -107,19 +117,19 @@ const skills = {
         <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
           <h3 class="text-sm font-semibold mb-2" style="color: var(--color-text)">Agentic coding</h3>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">
-            Evaluating where coding agents help most: implementation speed, repo navigation, repetitive refactors, and review loops.
+            Useful for repo navigation, implementation spikes, repetitive edits, and documentation passes when the review boundary stays explicit.
           </p>
         </div>
         <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
           <h3 class="text-sm font-semibold mb-2" style="color: var(--color-text)">Spec-driven work</h3>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">
-            Using clear requirements, constraints, and acceptance criteria to reduce ambiguity before code generation starts.
+            Treating requirements, constraints, and acceptance criteria as usable execution context before implementation starts.
           </p>
         </div>
         <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
           <h3 class="text-sm font-semibold mb-2" style="color: var(--color-text)">Skills & automations</h3>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">
-            Building small, composable workflows around prompts, scripts, and documentation so useful patterns can be reused instead of re-explained.
+            Building reusable prompts, scripts, and project-specific scaffolding so useful patterns can be reused instead of re-explained.
           </p>
         </div>
       </div>
