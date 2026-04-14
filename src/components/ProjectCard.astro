@@ -1,10 +1,13 @@
 ---
+import { getProjectMedia } from '../data/projectMedia';
+
 interface Link {
   label: string;
   url: string;
 }
 
 interface Props {
+  slug: string;
   title: string;
   description: string;
   date: Date;
@@ -13,17 +16,39 @@ interface Props {
   featured?: boolean;
 }
 
-const { title, description, date, tags = [], links = [] } = Astro.props;
+const { slug, title, description, date, tags = [], links = [] } = Astro.props;
 
 const year = date.getFullYear();
+const media = getProjectMedia(slug);
 ---
 
 <article
   class="rounded-xl p-5 flex flex-col gap-3 transition-colors"
-  style="background: var(--color-bg-card); border: 1px solid var(--color-border)"
+  style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)"
 >
+  {media && (
+    <a
+      href={`/projects/${slug}`}
+      class="block overflow-hidden rounded-lg mb-1"
+      style="border: 1px solid var(--color-border); background: rgba(15, 23, 42, 0.8)"
+    >
+      <img
+        src={media.image.src}
+        width={media.image.width}
+        height={media.image.height}
+        alt={media.alt}
+        class="w-full h-auto aspect-[16/9] object-cover"
+        loading="lazy"
+      />
+    </a>
+  )}
+
   <div class="flex items-start justify-between gap-2">
-    <h3 class="font-semibold text-base leading-snug" style="color: var(--color-text)">{title}</h3>
+    <h3 class="font-semibold text-base leading-snug" style="color: var(--color-text)">
+      <a href={`/projects/${slug}`} class="transition-colors" style="color: inherit">
+        {title}
+      </a>
+    </h3>
     <span class="text-xs shrink-0 mt-0.5 font-mono" style="color: var(--color-text-muted)">{year}</span>
   </div>
 
@@ -42,15 +67,29 @@ const year = date.getFullYear();
     </div>
   )}
 
-  {links.length > 0 && (
-    <div class="flex gap-4 mt-auto pt-1">
+  <div class="flex flex-wrap gap-4 mt-auto pt-2 items-center">
+    <a
+      href={`/projects/${slug}`}
+      class="text-xs font-medium flex items-center gap-1 transition-colors"
+      style="color: var(--color-accent)"
+    >
+      Read case study
+      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true">
+        <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+      </svg>
+    </a>
+
+    {links.length > 0 && (
+      <>
       {links.map(({ label, url }) => (
         <a
           href={url}
-          target="_blank"
-          rel="noopener noreferrer"
+          target={url.startsWith('http') ? '_blank' : undefined}
+          rel={url.startsWith('http') ? 'noopener noreferrer' : undefined}
           class="text-xs font-medium flex items-center gap-1 transition-colors"
-          style="color: var(--color-accent)"
+          style="color: var(--color-text-muted)"
         >
           {label}
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"
@@ -60,6 +99,7 @@ const year = date.getFullYear();
           </svg>
         </a>
       ))}
-    </div>
-  )}
+      </>
+    )}
+  </div>
 </article>

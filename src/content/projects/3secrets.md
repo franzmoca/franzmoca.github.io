@@ -1,14 +1,16 @@
 ---
 title: "3 Secrets"
 date: 2016-09-01
-description: "Companion mobile app for a board game, published on iOS App Store and Google Play. Built with Ionic/Cordova."
-tags: ["Ionic", "Cordova", "TypeScript", "iOS", "Android"]
+description: "Paid mobile companion app for the board game 3 Secrets, shipped on iOS and Android with multilingual support and timed game flows."
+tags: ["Ionic v1", "Cordova", "AngularJS", "iOS", "Android"]
 featured: false
 links: []
 ---
 
-A cross-platform companion app for a physical board game, built with Ionic and Apache Cordova. The app was published on both the iOS App Store and Google Play.
+`3 Secrets` is one of the few projects in the list that was actual paid client work rather than coursework or experimentation. It was a mobile companion app for the board game of the same name, built and shipped for both iOS and Android.
 
-The game involved hidden roles and secret objectives; the app served as a digital companion to manage role distribution, timers, and game state — elements that were cumbersome to handle with physical components alone.
+The app was built on Ionic v1 / Cordova with an AngularJS codebase and a fairly large offline content bundle: characters, promotional decks, localized assets, audio cues, timers, and different game modes. The repo also shows native-device integrations such as screenshot capture, social sharing, native audio, page transitions, and screen-awake handling, which mattered because the phone was part of the tabletop experience rather than just a secondary utility.
 
-This was my first experience shipping a production mobile app to both major app stores.
+From a product point of view, the interesting part was turning board-game friction into a mobile workflow: role selection, timed rounds, hints, sound design, team variants, and multilingual support all had to feel fast and low-maintenance in the middle of play.
+
+It was also one of my first real experiences shipping and maintaining a cross-platform mobile app in stores, with all the messy build, packaging, and plugin work that came with Cordova at the time.

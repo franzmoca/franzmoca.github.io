@@ -1,14 +1,14 @@
 ---
 title: "ERC721 Authenticity Token"
 date: 2019-09-01
-description: "Custom NFT system for product authenticity verification, with a React web dashboard and React Native mobile app."
+description: "MVP for Genuino World: ERC721-based authenticity and lifecycle tracking for phygital football jerseys with RFID-linked identity."
 tags: ["Solidity", "ERC721", "React", "React Native", "Ethereum"]
 featured: false
-links:
-  - label: "GitHub"
-    url: "https://github.com/franzmoca"
+links: []
 ---
 
-A system for verifying product authenticity using non-fungible tokens on Ethereum. Each physical product is associated with a unique ERC721 token deployed on-chain.
+This was an MVP for **Genuino World**, built around the idea of treating a physical football jersey as a `phygital` ERC721 asset. Each jersey had a digital identity tied to proprietary hardware and embedded RFID tags, so authenticity and product history could be checked against an on-chain record rather than a conventional certificate.
 
-The project included a React web dashboard for manufacturers to mint tokens and manage their product catalog, and a React Native mobile app for end consumers to scan a QR code and verify the authenticity of a product by checking its on-chain token.
+My work focused on the smart-contract layer and the jersey-management side of the application. The contract did more than mint ownership tokens: it also tracked events associated with the jersey, including location-related data intended to help prove that an item had actually been used in a match context.
+
+Around that, the product stack included a React web dashboard for management flows and a React Native / Expo mobile app for the physical verification experience. That combination made the project less about “NFTs” in the collectible sense and more about product identity, provenance, and real-world asset tracking.

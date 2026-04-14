@@ -1,24 +1,23 @@
 ---
 title: "Human2Simpson"
 date: 2018-08-01
-description: "Image-to-image translation using CycleGAN to convert real portraits into Simpsons-style characters."
-tags: ["Python", "TensorFlow", "CycleGAN", "Deep Learning", "GAN"]
+description: "CycleGAN-based image-to-image translation project for turning real portraits into Simpsons-style characters without paired training data."
+tags: ["Python", "PyTorch", "CycleGAN", "Deep Learning", "GAN"]
 featured: true
-links:
-  - label: "GitHub"
-    url: "https://github.com/franzmoca"
+links: []
 ---
 
-Human2Simpson is a machine learning project that applies [CycleGAN](https://junyanz.github.io/CycleGAN/) — an unpaired image-to-image translation model — to convert real portrait photos into Simpsons-style cartoon characters, and vice versa.
+Human2Simpson was a machine-learning exam project built around [CycleGAN](https://junyanz.github.io/CycleGAN/): learn a mapping between two visual domains without paired examples, then use that to translate real portraits into Simpsons-style faces and back again.
 
-Built as part of a university exam in Machine Learning, the project trained a CycleGAN model on a dataset of scraped Simpsons character frames paired with a portrait photo dataset.
+The interesting part was not just “cartoonify a face”, but the data and training problem. The project depended on building and cleaning a Simpsons-face dataset, then tuning the model enough to make the translation visually plausible despite the mismatch between real portraits and a very stylized animated domain.
 
-## Results
+## What I learned
 
-The model learned both the Simpson → human and human → Simpson mappings without paired training data. The Simpson → human direction produced more coherent results due to the higher structural regularity of cartoon faces.
+Like many GAN projects, the model quality depended as much on dataset work and training stability as on the architecture itself. The Simpson → human direction ended up more coherent than the reverse direction, which matched the intuition that cartoon faces are structurally simpler and easier to map from than to.
 
-## Tech stack
+## Stack
 
-- TensorFlow + Keras for model implementation
-- Google Colab with GPU runtime for training
-- Dataset: custom-scraped Simpsons frames + CelebA portrait dataset
+- PyTorch-based CycleGAN implementation
+- Visdom for training inspection and qualitative monitoring
+- Google Cloud / Colab-style GPU infrastructure for training runs
+- Custom Simpsons-face dataset plus a portrait dataset for the opposite domain

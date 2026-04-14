@@ -1,16 +1,28 @@
 ---
 title: "RhadaPay"
 date: 2021-08-01
-description: "Hackathon project streaming salary payments in real-time on Polygon using Superfluid protocol."
-tags: ["Solidity", "Superfluid", "Polygon", "React", "Web3.js"]
+description: "HackFS 2021 proof of concept for event-driven payments on Polygon, using Superfluid streams and off-chain event data."
+tags: ["Solidity", "Superfluid", "Polygon", "TypeScript", "IPFS", "HackFS"]
 featured: true
 links:
-  - label: "GitHub"
-    url: "https://github.com/franzmoca"
+  - label: "ETHGlobal showcase"
+    url: "https://ethglobal.com/showcase/rhadapay-ms6uq"
+  - label: "GitHub repo"
+    url: "https://github.com/RhadaPay/RhadaV1"
 ---
 
-RhadaPay was built during a blockchain hackathon as a proof-of-concept for streaming salary payments using [Superfluid](https://www.superfluid.finance/) on the Polygon network.
+RhadaPay was built during **HackFS 2021** as a proof of concept for what the team called **event-driven payments**: using real-world events to adjust an on-chain payment stream instead of relying on a fixed upfront payment or a simple milestone schedule.
 
-Instead of receiving a lump-sum payment at end of month, employees can see their earnings flow into their wallet in real time — by the second. The project explored the Superfluid constant flow agreement (CFA) and how to build an employer-facing dashboard for managing payment streams.
+The project ended up winning **Best overall use of Polygon**, **Best use of Superfluid**, and the **Textile Pool Prize**, which is a better summary of why it matters than the original hackathon narrative around streaming salaries.
 
-The team integrated Superfluid's SDK, deployed custom smart contracts on Polygon Mumbai testnet, and built a React frontend for employers to start, update, and terminate salary streams.
+## What we built
+
+The core idea was a contract-mediated workflow between two parties: one side posts work with staked funds and a set of event conditions, the other side delivers against that agreement, and the system opens or adjusts a payment stream based on the agreed event data.
+
+The implementation combined custom Solidity contracts with [Superfluid](https://www.superfluid.finance/) for continuous payments. Off-chain event information was logged to IPFS with Textile, and the project was wired into a web frontend for setting up jobs, event streams, and payment parameters.
+
+## Why it was interesting
+
+What I still like about RhadaPay is that it treated streaming payments as a protocol building block, not just a flashy wallet demo. The interesting part was the mechanism: how to connect off-chain events, escrow-like contract logic, and real-time settlement into something a dApp could build on top of.
+
+It stayed at hackathon-proof-of-concept level, but it was a good example of taking a protocol like Superfluid and pushing it toward a more product-shaped use case.

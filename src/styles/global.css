@@ -5,14 +5,16 @@
 @import "@fontsource/jetbrains-mono/400.css";
 
 @theme {
-  --color-bg: #0d0d0d;
-  --color-bg-card: #161616;
-  --color-bg-hover: #1e1e1e;
-  --color-border: #2a2a2a;
-  --color-text: #e5e5e5;
-  --color-text-muted: #888888;
-  --color-accent: #60a5fa;
-  --color-accent-hover: #93c5fd;
+  --color-bg: #0b1020;
+  --color-bg-card: rgba(16, 24, 44, 0.8);
+  --color-bg-hover: rgba(26, 38, 68, 0.92);
+  --color-border: rgba(148, 163, 184, 0.18);
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-accent: #7dd3fc;
+  --color-accent-hover: #bae6fd;
+  --color-accent-strong: #38bdf8;
+  --shadow-soft: 0 16px 40px rgba(2, 6, 23, 0.28);
 
   --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
@@ -20,6 +22,10 @@
 
 @layer base {
   html {
+    background:
+      radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 28%),
+      radial-gradient(circle at 82% 12%, rgba(45, 212, 191, 0.12), transparent 20%),
+      linear-gradient(180deg, #0b1020 0%, #0d1326 48%, #0a0f1f 100%);
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-sans);
@@ -38,6 +44,13 @@
     color: var(--color-accent-hover);
   }
 
+  a:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
   ::selection {
     background-color: var(--color-accent);
     color: #000;
@@ -45,5 +58,9 @@
 
   * {
     box-sizing: border-box;
+  }
+
+  body {
+    background: transparent;
   }
 }

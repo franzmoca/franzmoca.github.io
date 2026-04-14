@@ -15,23 +15,32 @@ const currentPath = Astro.url.pathname;
       fm<span style="color: var(--color-accent)">.</span>
     </a>
 
-    <!-- Desktop nav -->
-    <ul class="hidden sm:flex items-center gap-6 list-none m-0 p-0">
-      {navLinks.map(({ href, label }) => (
-        <li>
-          <a
-            href={href}
-            class="text-sm transition-colors"
-            style={currentPath === href || (href !== '/' && currentPath.startsWith(href))
-              ? 'color: var(--color-text)'
-              : 'color: var(--color-text-muted)'}
-            aria-current={currentPath === href ? 'page' : undefined}
-          >
-            {label}
-          </a>
-        </li>
-      ))}
-    </ul>
+    <div class="hidden sm:flex items-center gap-6">
+      <ul class="flex items-center gap-6 list-none m-0 p-0">
+        {navLinks.map(({ href, label }) => (
+          <li>
+            <a
+              href={href}
+              class="text-sm transition-colors"
+              style={currentPath === href || (href !== '/' && currentPath.startsWith(href))
+                ? 'color: var(--color-text)'
+                : 'color: var(--color-text-muted)'}
+              aria-current={currentPath === href ? 'page' : undefined}
+            >
+              {label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <a
+        href="/cv"
+        class="inline-flex items-center rounded-md px-3 py-1.5 text-sm font-medium transition-colors"
+        style="background: var(--color-bg-card); border: 1px solid var(--color-border); color: var(--color-text)"
+      >
+        CV
+      </a>
+    </div>
 
     <!-- Mobile nav -->
     <details class="sm:hidden relative">
@@ -57,6 +66,15 @@ const currentPath = Astro.url.pathname;
             </a>
           </li>
         ))}
+        <li>
+          <a
+            href="/cv"
+            class="block px-4 py-2 text-sm transition-colors"
+            style="color: var(--color-text)"
+          >
+            CV
+          </a>
+        </li>
       </ul>
     </details>
   </nav>

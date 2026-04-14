@@ -18,6 +18,9 @@ const skills = {
   <div class="max-w-2xl mx-auto px-6 py-16">
     <header class="mb-12">
       <h1 class="text-3xl font-semibold mb-3" style="color: var(--color-text)">About</h1>
+      <p class="text-base max-w-xl" style="color: var(--color-text-muted)">
+        I work at the intersection of product delivery, distributed systems, and the tooling engineers use to ship faster without lowering the bar.
+      </p>
     </header>
 
     <div class="flex flex-col gap-6 text-base leading-relaxed" style="color: var(--color-text-muted)">
@@ -41,10 +44,25 @@ const skills = {
         Developer Bootcamp, and shipped a few freelance blockchain and mobile projects.
       </p>
       <p>
-        Outside of engineering I'm interested in how decentralised systems interact with
-        regulation and real-world institutions. Lately I've been writing a bit, which
-        is what the blog is for.
+        What keeps me interested is the messy part where software leaves the lab: compliance constraints,
+        operational complexity, awkward user flows, team coordination, and the need to keep the whole thing
+        understandable for the next engineer touching it.
       </p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-3 mt-12">
+      <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+        <p class="text-xs font-mono uppercase tracking-wider mb-2" style="color: var(--color-text-muted)">Experience</p>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text)">5+ years delivering enterprise software across regulated industries.</p>
+      </div>
+      <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+        <p class="text-xs font-mono uppercase tracking-wider mb-2" style="color: var(--color-text-muted)">Scope</p>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text)">Architecture, implementation, deployment, and the glue between teams.</p>
+      </div>
+      <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+        <p class="text-xs font-mono uppercase tracking-wider mb-2" style="color: var(--color-text-muted)">Bias</p>
+        <p class="text-sm leading-relaxed" style="color: var(--color-text)">Practical systems, clear interfaces, and workflows that stay maintainable.</p>
+      </div>
     </div>
 
     <!-- Skills -->
@@ -66,6 +84,44 @@ const skills = {
             </div>
           </div>
         ))}
+      </div>
+    </div>
+
+    <div class="mt-12 pt-10" style="border-top: 1px solid var(--color-border)">
+      <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">LLMs & Agentic Workflows</h2>
+      <div class="flex flex-col gap-5 text-base leading-relaxed" style="color: var(--color-text-muted)">
+        <p>
+          I’m increasingly interested in how LLMs change software delivery when they are treated as part of the engineering system,
+          not as a novelty layer on top of it. The useful questions for me are about workflow design, quality boundaries,
+          and how much intent can be captured before implementation starts.
+        </p>
+        <p>
+          That pulls me toward <strong style="color: var(--color-text)">agentic coding</strong>,
+          <strong style="color: var(--color-text)"> spec-driven development</strong>, and repeatable automations:
+          reusable skills, task scaffolding, codebase-specific prompts, and lightweight internal workflows that help teams move faster
+          while keeping reviewable outputs and clear human ownership.
+        </p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-3 mt-6">
+        <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+          <h3 class="text-sm font-semibold mb-2" style="color: var(--color-text)">Agentic coding</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">
+            Evaluating where coding agents help most: implementation speed, repo navigation, repetitive refactors, and review loops.
+          </p>
+        </div>
+        <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+          <h3 class="text-sm font-semibold mb-2" style="color: var(--color-text)">Spec-driven work</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">
+            Using clear requirements, constraints, and acceptance criteria to reduce ambiguity before code generation starts.
+          </p>
+        </div>
+        <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+          <h3 class="text-sm font-semibold mb-2" style="color: var(--color-text)">Skills & automations</h3>
+          <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">
+            Building small, composable workflows around prompts, scripts, and documentation so useful patterns can be reused instead of re-explained.
+          </p>
+        </div>
       </div>
     </div>
 

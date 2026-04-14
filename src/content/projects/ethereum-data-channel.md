@@ -1,16 +1,16 @@
 ---
 title: "Ethereum Data Channel"
 date: 2018-08-01
-description: "WebRTC-based peer-to-peer communication layer for Ethereum dApps, reducing on-chain message overhead."
+description: "WebRTC-based communication layer for wallet-authenticated off-chain coordination between Ethereum dApp participants."
 tags: ["WebRTC", "Ethereum", "JavaScript", "Node.js", "Web3.js"]
 featured: false
-links:
-  - label: "GitHub"
-    url: "https://github.com/franzmoca"
+links: []
 ---
 
-A research project exploring WebRTC data channels as a communication layer between Ethereum dApp participants. The idea was to allow dApp users to exchange messages and state updates peer-to-peer — without publishing every message to the blockchain.
+Ethereum Data Channel was a research prototype for a simple but important idea: decentralized applications often need a peer-to-peer communication layer, and not every state update should become an on-chain transaction.
 
-This work became the precursor and communication layer for the [Pig state channel game](/projects/pig-blockchain-game), where two players needed a reliable off-chain channel to exchange signed state updates before settling on-chain.
+The project used WebRTC `RTCDataChannel` connections plus a signaling layer to let participants exchange state updates directly. In the thesis-era implementation, that channel was tied to wallet-oriented flows such as MetaMask-based signing and structured messages, so it could support blockchain applications rather than just generic chat-style messaging.
 
-The project included a signaling server for WebRTC handshake and a JavaScript library that dApp developers could integrate to establish direct data channels between wallet holders.
+Its clearest role was as the communication layer for the [Pig state channel game](/projects/pig-blockchain-game), where two players needed to exchange signed updates off-chain before settlement or dispute resolution. In that sense, it was less a standalone product and more an enabling transport layer for state-channel coordination.
+
+What makes it still interesting is the architecture question it addresses: if the blockchain is the settlement layer, what is the right off-chain channel for the live interaction? This project was my answer at the time.

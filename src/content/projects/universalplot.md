@@ -1,12 +1,16 @@
 ---
 title: "UniversalPlot"
 date: 2017-05-01
-description: "Sonification of mathematical functions in Wolfram Mathematica — making function plots accessible through sound."
+description: "Accessibility-focused Mathematica package for sonifying function plots and generating textual math descriptions."
 tags: ["Wolfram Mathematica", "Sonification", "Accessibility"]
 featured: false
 links: []
 ---
 
-UniversalPlot is a university project that explores **sonification** — the representation of data through sound — applied to mathematical functions.
+UniversalPlot was a university project focused on accessibility in mathematical visualization. Instead of treating a plotted function as something inherently visual, the package tried to expose the same information through sound and structured text.
 
-The tool, built in Wolfram Mathematica, takes a function as input and maps its shape to a musical sequence: pitch corresponds to function value, rhythm reflects slope changes. The goal was to make mathematical visualization accessible to visually impaired students.
+The implementation is a Wolfram Mathematica package that wraps NASA’s Math Description Engine through J/Link. It supports two main outputs: `Sonify[]`, which turns a function into an audio sweep, and `Describe[]`, which generates textual descriptions in different styles depending on whether the goal is mathematical structure, visual appearance, or educational standards.
+
+The sonification model mapped properties of the plot to properties of sound such as panning, pitch, and dedicated cues for axis intercepts. The point was not novelty for its own sake, but making function plots more accessible to visually impaired students and more generally more compatible with universal-design principles.
+
+It is still one of the more interesting non-blockchain projects here because it sits at the intersection of accessibility, technical computing, and interface design rather than standard CRUD software.

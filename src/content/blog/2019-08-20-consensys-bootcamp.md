@@ -1,11 +1,13 @@
 ---
 title: "Ethereum Developer Program — ConsenSys Academy 2019"
 date: 2019-08-20
-description: "A summary of my experience completing the ConsenSys Academy online Ethereum Developer Bootcamp."
+description: "A short recap of the ConsenSys Academy bootcamp and the mindset shift that came with learning Ethereum properly."
 tags: ["ethereum", "blockchain", "learning"]
 ---
 
-I recently completed the [ConsenSys Academy](https://consensys.net/academy/) Ethereum Developer Program — an online bootcamp covering Solidity smart contract development, security, and the broader Ethereum ecosystem.
+I completed the [ConsenSys Academy](https://consensys.net/academy/) Ethereum Developer Program in 2019, at a point when I wanted to move from “I follow this space” to “I can actually build on it.”
+
+The useful part of the bootcamp was that it forced a shift in mental model. Writing smart contracts is not just backend development on a slower machine: the execution model, security assumptions, and cost model are different enough that you have to relearn some instincts.
 
 ## What the course covered
 
@@ -17,16 +19,14 @@ I recently completed the [ConsenSys Academy](https://consensys.net/academy/) Eth
 
 ## Final project
 
-The final project was [dSignThis!](/projects/dsignthis) — a decentralized petition platform where users can create and sign petitions using their Ethereum wallet, with petition text stored on IPFS.
+My final project was [dSignThis!](/projects/dsignthis): a petition dApp built around wallet-based identity, on-chain petition logic, and IPFS-backed content. It was a small proof of concept, but it forced me to connect contract design, frontend integration, and storage tradeoffs in one workflow.
 
 ## Certificate
-
-I received a certificate of completion for the bootcamp.
 
 [Download certificate](/documents/bc.pdf)
 
 ## Takeaways
 
-The bootcamp gave me a solid foundation in smart contract development and the Ethereum mental model. The security module was particularly valuable — thinking about attack vectors at the contract level is a very different mindset from traditional web security.
+The security module was probably the most valuable part. Thinking in terms of irreversible state transitions, adversarial users, and contract-level attack surfaces is a different mindset from normal web development, and it was the point where Ethereum stopped feeling like just another framework.
 
 If you're interested in getting into Ethereum development, the ConsenSys Academy curriculum is a great starting point.

@@ -30,9 +30,11 @@ const ogImageUrl = ogImage ? new URL(ogImage, siteUrl).href : `${siteUrl}/og-def
     <title>{title} — Francesco Moca</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    <meta name="theme-color" content="#0b1020" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Francesco Moca" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={`${title} — Francesco Moca`} />
     <meta property="og:description" content={description} />

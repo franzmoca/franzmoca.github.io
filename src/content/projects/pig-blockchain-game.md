@@ -1,28 +1,28 @@
 ---
 title: "Pig — Blockchain State Channel Game"
 date: 2019-10-01
-description: "Master's thesis project: implementing the dice game Pig as a trustless state channel game on Ethereum."
+description: "Master’s thesis project on using state channels to make two-player blockchain games practical through off-chain coordination."
 tags: ["Solidity", "Ethereum", "State Channels", "React", "Web3.js"]
 featured: true
 links:
   - label: "Thesis"
     url: "/documents/tesi_magistrale.pdf"
-  - label: "GitHub"
-    url: "https://github.com/franzmoca"
 ---
 
-My master's thesis explored **state channels** as a Layer 2 scaling solution for Ethereum. The thesis demonstrates the concept by implementing a trustless, off-chain version of [Pig](https://en.wikipedia.org/wiki/Pig_(dice_game)) — a simple dice game — using counterfactual instantiation.
+My master's thesis used the dice game [Pig](https://en.wikipedia.org/wiki/Pig_(dice_game)) as a concrete way to study **state channels** for Ethereum. The real subject was not the game itself, but the coordination protocol behind it: how to let two players exchange signed state updates off-chain and only fall back to the blockchain when necessary.
 
 ## How it works
 
-Two players open a state channel by depositing funds into an on-chain contract. They then play the game by exchanging signed state updates off-chain. Only the final state — the game outcome — is submitted to the blockchain to settle the wager.
+Two players open a channel by locking funds in an on-chain contract. From there, the match progresses through signed off-chain messages that update the shared game state without paying on-chain costs turn by turn. Only settlement, or a dispute, requires direct blockchain interaction.
 
-This approach drastically reduces on-chain transactions: a full game involves only 2 on-chain transactions (open + close) regardless of how many rounds are played.
+That makes the project a Layer 2 prototype for a narrow but meaningful class of applications: two-player games where latency and transaction cost would otherwise make the experience unusable.
 
 ## Key challenges
 
-- **Dispute resolution**: implementing a fair challenge mechanism for when one player goes offline
-- **Randomness**: generating verifiable randomness off-chain without a trusted oracle
-- **Frontend integration**: building a React interface that manages off-chain state while keeping the user experience intuitive
+- **Dispute resolution**: designing challenge logic for the case where one player stops cooperating or disagrees on the latest state.
+- **Randomness**: handling dice rolls in a way that works inside a blockchain-constrained architecture without relying on a trivial trusted source.
+- **Protocol design**: keeping the implementation modular enough that the same state-channel structure could support more than one game.
 
-The implementation also covered the Ethereum Data Channel project (WebRTC-based communication layer between state channel participants).
+The thesis also compared the state-channel approach against a fully on-chain baseline on Ropsten-era infrastructure, which was the practical validation point: fewer on-chain interactions, lower cost, and a more workable interaction model.
+
+The communication layer behind that flow became the companion project [Ethereum Data Channel](/projects/ethereum-data-channel), which handled peer-to-peer message exchange between participants.
