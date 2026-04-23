@@ -1,5 +1,5 @@
 ---
-title: "Pig — Blockchain State Channel Game"
+title: "Pig: Blockchain State Channel Game"
 date: 2019-10-01
 description: "Master’s thesis project on using state channels to make two-player blockchain games practical through off-chain coordination."
 tags: ["Solidity", "Ethereum", "State Channels", "React", "Web3.js"]

@@ -9,7 +9,7 @@ links: []
 
 Human2Simpson was a machine-learning exam project built around [CycleGAN](https://junyanz.github.io/CycleGAN/): learn a mapping between two visual domains without paired examples, then use that to translate real portraits into Simpsons-style faces and back again.
 
-The interesting part was not just “cartoonify a face”, but the data and training problem. The project depended on building and cleaning a Simpsons-face dataset, then tuning the model enough to make the translation visually plausible despite the mismatch between real portraits and a very stylized animated domain.
+The hard part was not just "cartoonify a face", but the data and training problem. The project depended on building and cleaning a Simpsons-face dataset, then tuning the model enough to make the translation visually plausible despite the mismatch between real portraits and a very stylized animated domain.
 
 ## What I learned
 

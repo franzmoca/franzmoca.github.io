@@ -23,6 +23,6 @@ The implementation combined custom Solidity contracts with [Superfluid](https://
 
 ## Why it was interesting
 
-What I still like about RhadaPay is that it treated streaming payments as a protocol building block, not just a flashy wallet demo. The interesting part was the mechanism: how to connect off-chain events, escrow-like contract logic, and real-time settlement into something a dApp could build on top of.
+What I still like about RhadaPay is that it treated streaming payments as a protocol building block, not just a flashy wallet demo. The point was the mechanism: how to connect off-chain events, escrow-like contract logic, and real-time settlement into something a dApp could build on top of.
 
 It stayed at hackathon-proof-of-concept level, but it was a good example of taking a protocol like Superfluid and pushing it toward a more product-shaped use case.

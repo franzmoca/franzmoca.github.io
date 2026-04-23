@@ -22,7 +22,7 @@ const sortedPosts = posts.sort(
     </header>
 
     {sortedPosts.length === 0 ? (
-      <p style="color: var(--color-text-muted)">No posts yet — check back soon.</p>
+      <p style="color: var(--color-text-muted)">No posts yet, check back soon.</p>
     ) : (
       <div class="flex flex-col gap-3">
         {sortedPosts.map((post) => (

@@ -23,7 +23,7 @@ A university project on distributed machine learning: given an image, recommend 
 
 ## Scalability
 
-The more interesting part of the project was the systems side. The pipeline was built around Apache Spark and deployed on AWS EMR, with Flintrock-based cluster setup and batch-oriented training / inference scripts. That made it less of a toy notebook and more of a small distributed ML workflow.
+The part I liked most was the systems side. The pipeline was built around Apache Spark and deployed on AWS EMR, with Flintrock-based cluster setup and batch-oriented training / inference scripts. That made it less of a toy notebook and more of a small distributed ML system.
 
 There is also a later experimental branch in the `HashtagRecommenderAIVersion` repo, which captures follow-up work and rougher iterations. I treat that as an extension of the original academic prototype rather than a separate polished product.
 

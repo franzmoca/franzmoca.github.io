@@ -7,7 +7,7 @@ featured: true
 links: []
 ---
 
-This was a small experimental web app I built at the beginning of the “LLM era” in early 2024, mostly to test whether a lightweight pipeline could turn a set of articles into something closer to a podcast episode than a plain summary.
+This was a small experimental web app I built in early 2024, mostly to test whether a lightweight pipeline could turn a set of articles into something closer to a podcast episode than a plain summary.
 
 ## What it did
 
@@ -21,4 +21,4 @@ The frontend was intentionally minimal: a static single-page UI with Tailwind an
 
 ## Why I still like it
 
-In hindsight it was a rough early-2024 prototype, but it captured a pattern that still matters: useful LLM applications are often pipelines, not prompts. The interesting work was in orchestration, input cleanup, chunking, failure handling, and shaping the output into something that felt like an actual artifact rather than a raw model response.
+In hindsight it was a rough prototype, but it captured a pattern that still matters: good LLM applications are often pipelines, not prompts. Most of the real work was in orchestration, input cleanup, chunking, failure handling, and shaping the output into something that felt like an actual artifact rather than a raw model response.

@@ -21,6 +21,6 @@ To avoid putting unnecessary data on-chain, petition assets and related content 
 
 ## Why it mattered
 
-What makes the project worth keeping in the portfolio is not the petition theme by itself, but the separation of concerns: keep the high-value logic on-chain, move bulky assets off-chain, and still give the user a workflow that feels like a recognizable application rather than a contract demo.
+What makes the project worth keeping in the portfolio is not the petition theme by itself, but the separation of concerns: keep the high-value logic on-chain, move bulky assets off-chain, and still give the user something that feels like a real application rather than a contract demo.
 
 It stayed at proof-of-concept level, but it was a good capstone for pulling together Solidity, wallet integration, testing, and basic product design under the constraints of Ethereum tooling at the time.

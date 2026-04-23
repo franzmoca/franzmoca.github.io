@@ -1,5 +1,5 @@
 ---
-title: "Ethereum Developer Program — ConsenSys Academy 2019"
+title: "Ethereum Developer Program, ConsenSys Academy 2019"
 date: 2019-08-20
 description: "A short recap of the ConsenSys Academy bootcamp and the mindset shift that came with learning Ethereum properly."
 tags: ["ethereum", "blockchain", "learning"]
@@ -7,7 +7,7 @@ tags: ["ethereum", "blockchain", "learning"]
 
 I completed the [ConsenSys Academy](https://consensys.net/academy/) Ethereum Developer Program in 2019, at a point when I wanted to move from “I follow this space” to “I can actually build on it.”
 
-The useful part of the bootcamp was that it forced a shift in mental model. Writing smart contracts is not just backend development on a slower machine: the execution model, security assumptions, and cost model are different enough that you have to relearn some instincts.
+The best part of the bootcamp was that it forced a shift in mental model. Writing smart contracts is not just backend development on a slower machine. The execution model, security assumptions, and cost model are different enough that you have to relearn some instincts.
 
 ## What the course covered
 
@@ -27,6 +27,6 @@ My final project was [dSignThis!](/projects/dsignthis): a petition dApp built ar
 
 ## Takeaways
 
-The security module was probably the most valuable part. Thinking in terms of irreversible state transitions, adversarial users, and contract-level attack surfaces is a different mindset from normal web development, and it was the point where Ethereum stopped feeling like just another framework.
+The security module was probably the most valuable part. Thinking in terms of irreversible state transitions, adversarial users, and contract-level attack surfaces is a different mindset from normal web development. That was the point where Ethereum stopped feeling like just another framework.
 
 If you're interested in getting into Ethereum development, the ConsenSys Academy curriculum is a great starting point.
