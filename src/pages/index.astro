@@ -17,14 +17,14 @@ const latestPosts = allPosts
   .slice(0, 3);
 ---
 
-<BaseLayout title="Home" description="Full-Stack Developer based in Milan, Italy. Building web apps and exploring decentralized systems.">
+<BaseLayout title="Home" description="Full-stack developer in Milan working on blockchain, backend, frontend, and coding-agent tooling.">
   <Hero />
 
   <!-- Featured projects -->
   <section class="max-w-5xl mx-auto px-6 pb-20">
     <div class="flex items-center justify-between mb-8">
-      <h2 class="text-xl font-semibold" style="color: var(--color-text)">Selected Projects</h2>
-      <a href="/projects" class="text-sm transition-colors" style="color: var(--color-text-muted)">
+      <h2 class="text-xl font-semibold" style="color: var(--color-text)">Recent work</h2>
+      <a href="/projects" class="text-sm transition-colors hover:text-[var(--color-text)]" style="color: var(--color-text-muted)">
         All projects →
       </a>
     </div>
@@ -47,8 +47,8 @@ const latestPosts = allPosts
   {latestPosts.length > 0 && (
     <section class="max-w-5xl mx-auto px-6 pb-20">
       <div class="flex items-center justify-between mb-8">
-        <h2 class="text-xl font-semibold" style="color: var(--color-text)">Latest Posts</h2>
-        <a href="/blog" class="text-sm transition-colors" style="color: var(--color-text-muted)">
+        <h2 class="text-xl font-semibold" style="color: var(--color-text)">Writing</h2>
+        <a href="/blog" class="text-sm transition-colors hover:text-[var(--color-text)]" style="color: var(--color-text-muted)">
           All posts →
         </a>
       </div>
@@ -66,27 +66,24 @@ const latestPosts = allPosts
     </section>
   )}
 
-  <!-- Contact prompt -->
+  <!-- Contact -->
   <section class="max-w-5xl mx-auto px-6 pb-24">
     <div
-      class="rounded-xl p-8 text-center"
+      class="rounded-xl p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5"
       style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)"
     >
-      <h2 class="text-xl font-semibold mb-3" style="color: var(--color-text)">Get in touch</h2>
-      <p class="text-sm mb-5 max-w-md mx-auto" style="color: var(--color-text-muted)">
-        Interested in working together or just want to say hi? My inbox is open.
-      </p>
+      <div>
+        <h2 class="text-xl font-semibold mb-1" style="color: var(--color-text)">Get in touch</h2>
+        <p class="text-sm" style="color: var(--color-text-muted)">
+          Email is the fastest way to reach me.
+        </p>
+      </div>
       <a
         href="mailto:francesco.moca@gmail.com"
-        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors"
-        style="background: var(--color-accent); color: #000"
+        class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors self-start sm:self-auto"
+        style="background: var(--color-accent); color: var(--color-on-accent)"
       >
-        Send an email
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-          fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-          aria-hidden="true">
-          <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
-        </svg>
+        francesco.moca@gmail.com
       </a>
     </div>
   </section>

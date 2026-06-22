@@ -38,4 +38,6 @@ The most useful change was editorial, not technical. Several older projects were
 
 The site now feels like something I will actually maintain. Writing a new blog post is creating a `.md` file in `src/content/blog/` and moving on. The old "Recent Interests" section (R3 Corda, Kubernetes, Algorand, from 2021) is gone. The projects are now proper case studies instead of modal popups or one-line placeholders, which makes the site much closer to an actual portfolio than a cleaned-up archive.
 
-More importantly, the tools changed my motivation. I had wanted a site where I could publish more often, but I kept postponing the work because every update felt heavier than it should have. Now that the setup is simpler and the tedious parts are easier to delegate, I am much more likely to actually use it.
+More importantly, the tools changed my motivation. I had wanted a site where I could publish more often, but every update felt heavier than it should have. Now that the setup is simpler and the tedious parts are easier to delegate, the cost of publishing has dropped far enough that it is no longer the thing stopping me.
+
+Next up, I want to write about something I have been experimenting with on the side: running local models for coding and day-to-day work. The interesting question is not whether a 30B-parameter model matches a frontier one — it does not — but where the trade-off between privacy, latency, and capability actually lands for real tasks. More on that soon.

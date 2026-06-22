@@ -21,6 +21,7 @@ const { Content } = await render(project);
   date={project.data.date}
   tags={project.data.tags}
   links={project.data.links}
+  ogImage={`/open-graph/projects/${project.id}.png`}
 >
   <Content />
 </ProjectPost>

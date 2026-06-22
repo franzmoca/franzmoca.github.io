@@ -18,12 +18,12 @@ const formattedDate = date.toLocaleDateString('en-US', {
 
 <a
   href={`/blog/${slug}`}
-  class="block rounded-xl p-5 transition-colors group"
+  class="block rounded-xl p-5 surface-card group"
   style="background: var(--color-bg-card); border: 1px solid var(--color-border)"
 >
   <div class="flex items-start justify-between gap-3 mb-2">
     <h3
-      class="font-semibold text-base leading-snug transition-colors group-hover:text-[var(--color-accent)]"
+      class="font-semibold text-base leading-snug transition-colors group-hover:text-[var(--color-accent-strong)]"
       style="color: var(--color-text)"
     >
       {title}
@@ -44,7 +44,7 @@ const formattedDate = date.toLocaleDateString('en-US', {
       {tags.map((tag) => (
         <span
           class="text-xs px-2 py-0.5 rounded font-mono"
-          style="background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text-muted)"
+          style="background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text)"
         >
           {tag}
         </span>

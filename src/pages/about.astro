@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Download from '../components/icons/Download.astro';
 
 const skills = {
   'Languages': ['Java', 'Go', 'Python', 'TypeScript', 'JavaScript', 'Solidity', 'PyTeal'],
@@ -15,55 +16,54 @@ const skills = {
   title="About"
   description="About Francesco Moca, full-stack developer and IT consultant based in Milan, Italy."
 >
-  <div class="max-w-2xl mx-auto px-6 py-16">
+  <div class="max-w-3xl mx-auto px-6 py-16">
     <header class="mb-12">
       <h1 class="text-3xl font-semibold mb-3" style="color: var(--color-text)">About</h1>
       <p class="text-base max-w-xl" style="color: var(--color-text-muted)">
-        I work on full-stack software, enterprise systems, and the day-to-day problems that show up when something has to run for real.
+        What keeps me interested is the messy part of software — the side most tools quietly avoid.
       </p>
     </header>
 
     <div class="flex flex-col gap-6 text-base leading-relaxed" style="color: var(--color-text-muted)">
       <p>
-        I'm Francesco, a full-stack developer and IT consultant based in Milan, Italy. I work
-        at <strong style="color: var(--color-text)">Blockchain Reply</strong>, where I have
-        spent the past five years building enterprise software, including blockchain applications,
-        for clients across finance, energy, insurance, supply chain, and payments.
+        Compliance constraints, operational complexity, awkward user flows, production incidents,
+        team coordination, and the need to keep the whole thing understandable for the next person
+        touching it: that is where most of my work actually lives. The code is the easy part.
       </p>
       <p>
-        My scope usually spans backend APIs, frontend interfaces, smart contracts, and DevOps,
-        plus the analysis and coordination work needed to get a project over the line. Depending
-        on the phase, I might be writing code, shaping a solution with the client, supporting delivery,
+        I am Francesco, a full-stack developer and IT consultant working at
+        <strong style="color: var(--color-text)">Blockchain Reply</strong>. Over the past five
+        years I have helped deliver enterprise software — much of it blockchain-based — for
+        clients in finance, energy, insurance, supply chain, and payments. Depending on the
+        phase I might be writing code, shaping a solution with the client, supporting delivery,
         or helping a team keep architecture and implementation aligned.
       </p>
       <p>
-        Technically, that has meant Java / Spring Boot backends, Go and Python services, Vue, React,
-        and Next.js frontends, Solidity, Go chaincode, PyTeal, Kubernetes, AWS, serverless deployments,
-        and several blockchain platforms including EVM chains, Hyperledger Fabric, Hyperledger Besu,
-        R3 Corda, and Algorand, along with custody and operational tooling such as Gnosis Safe and Fireblocks.
-        On the delivery side, DevOps for me has also meant curating CI/CD pipelines, release flows, and project
-        automation through tools such as Jenkins, GitLab CI, and GitHub Actions.
+        Technically, that has meant Java / Spring Boot backends, Go and Python services, Vue,
+        React, and Next.js frontends, and smart contracts in Solidity, Go chaincode, and PyTeal
+        across EVM chains, Hyperledger Fabric, Hyperledger Besu, R3 Corda, and Algorand. On the
+        delivery side, it has meant Kubernetes on AWS, Terraform and CloudFormation, and CI/CD
+        through Jenkins, GitLab CI, and GitHub Actions, plus custody tooling like Gnosis Safe
+        and Fireblocks when the client needed it.
       </p>
       <p>
-        Before Reply, I completed a master's thesis on Ethereum state channels, finished the ConsenSys
-        Academy bootcamp, and built a mix of freelance blockchain and mobile projects. More recently I
-        have also been exploring smaller experiments around LLMs, coding agents, and small developer tools.
-        What keeps me interested is the messy part of software: compliance constraints, operational complexity,
-        awkward user flows, production incidents, team coordination, and the need to keep the whole thing
-        understandable for the next person touching it.
+        Before Reply, I wrote a master's thesis on Ethereum state channels, finished the
+        ConsenSys Academy bootcamp, and built a mix of freelance blockchain and mobile projects.
+        More recently I have been poking at smaller experiments around LLMs, coding agents,
+        and small developer tools.
       </p>
     </div>
 
     <div class="grid gap-4 sm:grid-cols-3 mt-12">
-      <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+      <div class="rounded-xl p-5 surface-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
         <p class="text-xs font-mono uppercase tracking-wider mb-2" style="color: var(--color-text-muted)">Experience</p>
         <p class="text-sm leading-relaxed" style="color: var(--color-text)">5+ years delivering enterprise software in regulated and technically complex environments.</p>
       </div>
-      <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+      <div class="rounded-xl p-5 surface-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
         <p class="text-xs font-mono uppercase tracking-wider mb-2" style="color: var(--color-text-muted)">Scope</p>
         <p class="text-sm leading-relaxed" style="color: var(--color-text)">Backend, frontend, smart contracts, DevOps, and the coordination between teams and clients.</p>
       </div>
-      <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+      <div class="rounded-xl p-5 surface-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
         <p class="text-xs font-mono uppercase tracking-wider mb-2" style="color: var(--color-text-muted)">Bias</p>
         <p class="text-sm leading-relaxed" style="color: var(--color-text)">Practical systems, clear interfaces, and delivery processes that stay maintainable under pressure.</p>
       </div>
@@ -71,9 +71,9 @@ const skills = {
 
     <!-- Skills -->
     <div class="mt-12">
-      <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">Selected Technologies</h2>
+      <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">Tools I reach for</h2>
       <p class="text-sm mb-6" style="color: var(--color-text-muted)">
-        The stack below is not exhaustive, but it covers the platforms and tools I have used most often in recent years.
+        Not exhaustive, but a fair picture of the platforms and tools I have used most often in recent years.
       </p>
       <div class="flex flex-col gap-5">
         {Object.entries(skills).map(([category, items]) => (
@@ -83,7 +83,7 @@ const skills = {
               {items.map((skill) => (
                 <span
                   class="text-sm px-3 py-1 rounded font-mono"
-                  style="background: var(--color-bg-card); border: 1px solid var(--color-border); color: var(--color-text-muted)"
+                  style="background: var(--color-bg-card); border: 1px solid var(--color-border); color: var(--color-text)"
                 >
                   {skill}
                 </span>
@@ -95,36 +95,38 @@ const skills = {
     </div>
 
     <div class="mt-12 pt-10" style="border-top: 1px solid var(--color-border)">
-      <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">LLMs, Coding Agents, and Automation</h2>
+      <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">LLMs, coding agents, and automation</h2>
       <div class="flex flex-col gap-5 text-base leading-relaxed" style="color: var(--color-text-muted)">
         <p>
-          I am interested in LLMs less as chat interfaces and more as tools inside the delivery process. The part I care
-          about is how tasks are framed, how review is handled, and how to make the output usable by a real team.
+          I am interested in LLMs less as chat interfaces and more as tools inside the delivery process.
+          The parts I care about are how tasks are framed, how review is handled, and how to make the
+          output usable by a real team.
         </p>
         <p>
-          I have explored that through small projects and experiments: an app that turned article collections into AI-generated
-          podcast episodes, this website redesign done with coding agents, and small tooling such as
-          <strong style="color: var(--color-text)">opencode-lombok</strong>. That has pushed me toward coding agents,
-          spec-driven work, and reusable automations: prompts, scripts, and project-specific setup that save time without
-          hiding ownership or lowering the review bar.
+          I have explored that through small projects and experiments: an app that turned article
+          collections into AI-generated podcast episodes, this website redesign done with coding agents,
+          and small tooling such as <strong style="color: var(--color-text)">opencode-lombok</strong>.
+          That has pushed me toward coding agents, spec-driven work, and reusable automations: prompts,
+          scripts, and project-specific setup that save time without hiding ownership or lowering the
+          review bar.
         </p>
       </div>
 
       <div class="grid gap-4 sm:grid-cols-3 mt-6">
-        <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+        <div class="rounded-xl p-5 surface-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
           <h3 class="text-sm font-semibold mb-2" style="color: var(--color-text)">Coding agents</h3>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">
             Good for repo navigation, quick implementation spikes, repetitive edits, and documentation passes when review stays clear.
           </p>
         </div>
-        <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+        <div class="rounded-xl p-5 surface-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
           <h3 class="text-sm font-semibold mb-2" style="color: var(--color-text)">Spec-driven work</h3>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">
             Turning requirements, constraints, and acceptance criteria into something precise before implementation starts.
           </p>
         </div>
-        <div class="rounded-xl p-5" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
-          <h3 class="text-sm font-semibold mb-2" style="color: var(--color-text)">Skills & automations</h3>
+        <div class="rounded-xl p-5 surface-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)">
+          <h3 class="text-sm font-semibold mb-2" style="color: var(--color-text)">Skills &amp; automations</h3>
           <p class="text-sm leading-relaxed" style="color: var(--color-text-muted)">
             Building reusable prompts, scripts, and project setup so useful patterns do not have to be rebuilt every time.
           </p>
@@ -138,11 +140,11 @@ const skills = {
       <p class="text-sm mb-5" style="color: var(--color-text-muted)">
         Full work history, skills, and education.
       </p>
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-3 flex-wrap">
         <a
           href="/cv"
           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors"
-          style="background: var(--color-accent); color: #000"
+          style="background: var(--color-accent); color: var(--color-on-accent)"
         >
           View CV
         </a>
@@ -152,13 +154,7 @@ const skills = {
           class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors"
           style="background: var(--color-bg-card); border: 1px solid var(--color-border); color: var(--color-text)"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            aria-hidden="true">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/>
-            <line x1="12" y1="15" x2="12" y2="3"/>
-          </svg>
+          <Download size={14} />
           Download PDF
         </a>
       </div>
@@ -168,13 +164,13 @@ const skills = {
     <div class="mt-12">
       <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">Contact</h2>
       <p class="text-sm mb-5" style="color: var(--color-text-muted)">
-        The best way to reach me is by email or LinkedIn.
+        Email or LinkedIn are the best ways to reach me.
       </p>
       <div class="flex flex-wrap items-center gap-5">
         <a
           href="mailto:francesco.moca@gmail.com"
           class="text-sm font-medium transition-colors"
-          style="color: var(--color-accent)"
+          style="color: var(--color-accent-strong)"
         >
           francesco.moca@gmail.com
         </a>
@@ -182,7 +178,7 @@ const skills = {
           href="https://github.com/franzmoca"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm font-medium transition-colors"
+          class="text-sm font-medium transition-colors hover:text-[var(--color-text)]"
           style="color: var(--color-text-muted)"
         >
           GitHub
@@ -191,7 +187,7 @@ const skills = {
           href="https://www.linkedin.com/in/francesco-moca-69001a121/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm font-medium transition-colors"
+          class="text-sm font-medium transition-colors hover:text-[var(--color-text)]"
           style="color: var(--color-text-muted)"
         >
           LinkedIn

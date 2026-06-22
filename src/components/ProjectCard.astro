@@ -1,5 +1,6 @@
 ---
 import { getProjectMedia } from '../data/projectMedia';
+import ArrowOut from './icons/ArrowOut.astro';
 
 interface Link {
   label: string;
@@ -23,14 +24,14 @@ const media = getProjectMedia(slug);
 ---
 
 <article
-  class="rounded-xl p-5 flex flex-col gap-3 transition-colors"
+  class="rounded-xl p-5 flex flex-col gap-3 surface-card"
   style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)"
 >
   {media && (
     <a
       href={`/projects/${slug}`}
       class="block overflow-hidden rounded-lg mb-1"
-      style="border: 1px solid var(--color-border); background: rgba(15, 23, 42, 0.8)"
+      style="border: 1px solid var(--color-border); background: var(--color-bg-card)"
     >
       <img
         src={media.image.src}
@@ -59,7 +60,7 @@ const media = getProjectMedia(slug);
       {tags.map((tag) => (
         <span
           class="text-xs px-2 py-0.5 rounded font-mono"
-          style="background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text-muted)"
+          style="background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text)"
         >
           {tag}
         </span>
@@ -71,14 +72,10 @@ const media = getProjectMedia(slug);
     <a
       href={`/projects/${slug}`}
       class="text-xs font-medium flex items-center gap-1 transition-colors"
-      style="color: var(--color-accent)"
+      style="color: var(--color-accent-strong)"
     >
       Read case study
-      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"
-        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-        aria-hidden="true">
-        <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
-      </svg>
+      <ArrowOut size={11} />
     </a>
 
     {links.length > 0 && (
@@ -88,15 +85,11 @@ const media = getProjectMedia(slug);
           href={url}
           target={url.startsWith('http') ? '_blank' : undefined}
           rel={url.startsWith('http') ? 'noopener noreferrer' : undefined}
-          class="text-xs font-medium flex items-center gap-1 transition-colors"
+          class="text-xs font-medium flex items-center gap-1 transition-colors hover:text-[var(--color-text)]"
           style="color: var(--color-text-muted)"
         >
           {label}
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24"
-            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-            aria-hidden="true">
-            <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
-          </svg>
+          <ArrowOut size={11} />
         </a>
       ))}
       </>

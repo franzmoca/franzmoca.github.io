@@ -1,5 +1,9 @@
 ---
-// Standalone page — no BaseLayout, fully self-contained white document
+// Standalone page — self-contained document view. Light aesthetic regardless of
+// site theme, because it's optimised for print / download.
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
 ---
 
 <!doctype html>
@@ -10,9 +14,6 @@
     <title>Francesco Moca - CV</title>
     <meta name="description" content="CV of Francesco Moca, full-stack developer and IT consultant." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -56,14 +57,24 @@
       }
       .dl-btn:hover { background: #333; }
 
-      /* ── Page wrapper (A4-ish) ── */
+      /* ── Page wrapper: A4-ish on desktop, fluid on narrow viewports ── */
       .page {
-        width: 794px;
-        min-height: 1123px;
+        width: 100%;
+        max-width: 794px;
+        min-height: auto;
         background: #fff;
-        margin: 32px auto;
-        padding: 52px 56px 56px;
-        box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+        margin: 16px auto;
+        padding: 32px 24px 40px;
+        box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+      }
+
+      @media (min-width: 820px) {
+        .page {
+          min-height: 1123px;
+          margin: 32px auto;
+          padding: 52px 56px 56px;
+          box-shadow: 0 4px 32px rgba(0, 0, 0, 0.12);
+        }
       }
 
       /* ── Header ── */
@@ -109,6 +120,7 @@
         align-items: baseline;
         gap: 8px;
         margin-bottom: 1px;
+        flex-wrap: wrap;
       }
       .exp-company {
         font-size: 10.5pt;
@@ -155,6 +167,13 @@
       }
       .skills-table td:last-child { color: #333; }
 
+      @media (max-width: 600px) {
+        .skills-table td { display: block; width: 100% !important; }
+        .skills-table td:first-child { padding-bottom: 1px; }
+        .skills-table td:last-child { padding-bottom: 10px; }
+        .skills-table tr:last-child td:last-child { padding-bottom: 0; }
+      }
+
       /* ── Education ── */
       .edu-entry { margin-bottom: 10px; }
       .edu-row {
@@ -162,6 +181,7 @@
         justify-content: space-between;
         align-items: baseline;
         gap: 8px;
+        flex-wrap: wrap;
       }
       .edu-degree { font-size: 9.5pt; font-weight: 600; color: #0f0f0f; }
       .edu-school { font-size: 9pt; color: #555; }
@@ -172,6 +192,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0 32px;
+      }
+      @media (max-width: 600px) {
+        .two-col { grid-template-columns: 1fr; gap: 16px 0; }
       }
       .cert-entry { margin-bottom: 7px; }
       .cert-name { font-size: 9.5pt; font-weight: 600; color: #0f0f0f; }
@@ -186,7 +209,7 @@
         body { background: #fff; }
         .site-nav { display: none; }
         .page {
-          width: 100%; margin: 0; padding: 0;
+          width: 100%; max-width: none; margin: 0; padding: 0;
           box-shadow: none; min-height: unset;
         }
         a { color: inherit; }
@@ -250,13 +273,10 @@
               full-stack developer, technical lead, on-site consultant, and architecture support.
             </p>
             <ul>
-              <li>Built smart contracts and blockchain components in <strong>Solidity</strong>, <strong>Go</strong>, and <strong>PyTeal</strong> across public and permissioned environments, including Polygon, Hyperledger Besu, Hyperledger Fabric, R3 Corda, and Algorand.</li>
-              <li>Worked on platforms for tokenization, digital asset lifecycle management, custody-integrated flows, and blockchain gateways across both public and private networks.</li>
-              <li>Developed backends and integration layers in <strong>Java / Spring Boot</strong>, <strong>Go</strong>, and occasionally <strong>Python</strong> for token lifecycle management, digital asset issuance, and DeFi-style platforms.</li>
-              <li>Built frontend applications with <strong>Vue.js 2/3</strong>, <strong>React</strong>, and <strong>Next.js</strong>, including operational dashboards, marketplaces, tokenisation portals, and exchange interfaces.</li>
-              <li>Worked on infrastructure and operations with <strong>Kubernetes</strong>, <strong>AWS</strong>, <strong>Terraform</strong>, <strong>CloudFormation</strong>, and <strong>Serverless Framework</strong>, including Hyperledger Fabric network orchestration.</li>
-              <li>Integrated institutional custody solutions such as <strong>Gnosis Safe</strong> and <strong>Fireblocks</strong> for regulated asset-management workflows.</li>
-              <li>Curated delivery workflows beyond implementation: CI/CD pipelines with <strong>Jenkins</strong>, <strong>GitLab CI</strong>, and <strong>GitHub Actions</strong>, plus technical analysis, architecture documents, client workshops, migration planning, mentoring junior developers, and pre-sales proposals.</li>
+              <li>Built smart contracts in <strong>Solidity</strong>, <strong>Go chaincode</strong>, and <strong>PyTeal</strong> across Polygon, Hyperledger Besu, Hyperledger Fabric, R3 Corda, and Algorand — tokenization platforms, digital-asset lifecycle management, custody-integrated flows, and blockchain gateways.</li>
+              <li>Delivered backends and integration layers in <strong>Java / Spring Boot</strong>, <strong>Go</strong>, and <strong>Python</strong>, plus frontends with <strong>Vue.js 2/3</strong>, <strong>React</strong>, and <strong>Next.js</strong> — operational dashboards, marketplaces, tokenisation portals, and exchange interfaces.</li>
+              <li>Ran infrastructure and operations on <strong>Kubernetes</strong>, <strong>AWS</strong>, <strong>Terraform</strong>, <strong>CloudFormation</strong>, and <strong>Serverless Framework</strong>, including Hyperledger Fabric orchestration and custody integrations with <strong>Gnosis Safe</strong> and <strong>Fireblocks</strong>.</li>
+              <li>Curated delivery beyond implementation: CI/CD pipelines with <strong>Jenkins</strong>, <strong>GitLab CI</strong>, and <strong>GitHub Actions</strong>, plus technical analysis, architecture documentation, client workshops, migration planning, mentoring junior developers, and pre-sales support.</li>
             </ul>
           </div>
         </div>
@@ -344,7 +364,7 @@
             </div>
             <div class="lang-entry">
               <span class="lang-name">English</span>
-            <span class="lang-level">Professional, advanced written, intermediate spoken</span>
+              <span class="lang-level">Professional proficiency &mdash; advanced written, intermediate spoken</span>
             </div>
           </div>
         </div>

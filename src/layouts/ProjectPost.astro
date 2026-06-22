@@ -1,6 +1,8 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { getProjectMedia } from '../data/projectMedia';
+import ArrowOut from '../components/icons/ArrowOut.astro';
+import '../styles/prose.css';
 
 interface Link {
   label: string;
@@ -14,9 +16,10 @@ interface Props {
   date: Date;
   tags?: string[];
   links?: Link[];
+  ogImage?: string;
 }
 
-const { slug, title, description, date, tags = [], links = [] } = Astro.props;
+const { slug, title, description, date, tags = [], links = [], ogImage } = Astro.props;
 
 const formattedDate = date.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -25,7 +28,7 @@ const formattedDate = date.toLocaleDateString('en-US', {
 const media = getProjectMedia(slug);
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} ogImage={ogImage}>
   <article class="max-w-3xl mx-auto px-6 py-16">
     <a href="/projects" class="inline-flex items-center gap-2 text-sm mb-8" style="color: var(--color-text-muted)">
       ← Back to projects
@@ -40,7 +43,7 @@ const media = getProjectMedia(slug);
             <div class="flex gap-2 flex-wrap">
               {tags.map((tag) => (
                 <span class="px-2 py-0.5 rounded text-xs font-mono"
-                  style="background: var(--color-bg-card); border: 1px solid var(--color-border)">
+                  style="background: var(--color-bg-card); border: 1px solid var(--color-border); color: var(--color-text)">
                   {tag}
                 </span>
               ))}
@@ -62,11 +65,7 @@ const media = getProjectMedia(slug);
               style="background: var(--color-bg-card); border: 1px solid var(--color-border); color: var(--color-text)"
             >
               {label}
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
-                aria-hidden="true">
-                <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
-              </svg>
+              <ArrowOut size={12} />
             </a>
           ))}
         </div>
@@ -77,7 +76,7 @@ const media = getProjectMedia(slug);
       <figure class="mb-10">
         <div
           class="overflow-hidden rounded-2xl"
-          style="border: 1px solid var(--color-border); background: rgba(15, 23, 42, 0.78); box-shadow: var(--shadow-soft)"
+          style="border: 1px solid var(--color-border); background: var(--color-bg-card); box-shadow: var(--shadow-soft)"
         >
           <img
             src={media.image.src}
@@ -95,78 +94,3 @@ const media = getProjectMedia(slug);
     </div>
   </article>
 </BaseLayout>
-
-<style>
-  .prose :global(h2) {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin: 2rem 0 0.75rem;
-    color: var(--color-text);
-  }
-  .prose :global(h3) {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin: 1.5rem 0 0.5rem;
-    color: var(--color-text);
-  }
-  .prose :global(p) {
-    margin: 0 0 1.25rem;
-    color: var(--color-text);
-    line-height: 1.75;
-  }
-  .prose :global(a) {
-    color: var(--color-accent);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-  .prose :global(a:hover) {
-    color: var(--color-accent-hover);
-  }
-  .prose :global(ul),
-  .prose :global(ol) {
-    margin: 0 0 1.25rem 1.5rem;
-    color: var(--color-text);
-  }
-  .prose :global(li) {
-    margin-bottom: 0.4rem;
-    line-height: 1.7;
-  }
-  .prose :global(code) {
-    font-family: var(--font-mono);
-    font-size: 0.875em;
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    padding: 0.15em 0.4em;
-    border-radius: 4px;
-    color: var(--color-accent);
-  }
-  .prose :global(pre) {
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    padding: 1.25rem;
-    overflow-x: auto;
-    margin: 0 0 1.5rem;
-  }
-  .prose :global(pre code) {
-    background: none;
-    border: none;
-    padding: 0;
-    color: var(--color-text);
-  }
-  .prose :global(blockquote) {
-    border-left: 3px solid var(--color-accent);
-    padding-left: 1rem;
-    margin: 0 0 1.25rem;
-    color: var(--color-text-muted);
-  }
-  .prose :global(hr) {
-    border: none;
-    border-top: 1px solid var(--color-border);
-    margin: 2rem 0;
-  }
-  .prose :global(strong) {
-    font-weight: 600;
-    color: var(--color-text);
-  }
-</style>
