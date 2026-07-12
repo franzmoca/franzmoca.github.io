@@ -114,7 +114,7 @@ await page.pdf({
   format: 'A4',
   scale: 0.8,
   printBackground: true,
-  margin: { top: '16mm', right: '16mm', bottom: '16mm', left: '16mm' },
+  margin: { top: '13mm', right: '15mm', bottom: '13mm', left: '15mm' },
   displayHeaderFooter: false,
 });
 
