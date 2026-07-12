@@ -21,8 +21,8 @@ The core idea was a contract-mediated workflow between two parties: one side pos
 
 The implementation combined custom Solidity contracts with [Superfluid](https://www.superfluid.finance/) for continuous payments. Off-chain event information was logged to IPFS with Textile, and the project was wired into a web frontend for setting up jobs, event streams, and payment parameters.
 
-## Why it was interesting
+## The mechanism
 
-What I still like about RhadaPay is that it treated streaming payments as a protocol building block, not just a flashy wallet demo. The point was the mechanism: how to connect off-chain events, escrow-like contract logic, and real-time settlement into something a dApp could build on top of.
+RhadaPay treated streaming payments as a protocol building block: the interesting part was connecting off-chain events, escrow-like contract logic, and real-time settlement into something a dApp could build on top of.
 
 It stayed at hackathon-proof-of-concept level, but it was a good example of taking a protocol like Superfluid and pushing it toward a more product-shaped use case.

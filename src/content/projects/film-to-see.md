@@ -13,4 +13,4 @@ Film To See started from a simple problem, but the implementation was more ambit
 
 The Android client was written in Java and used a custom backend API with OkHttp for group membership, chat, and voting flows. The UI combined Material Design patterns with a coverflow-style movie browser, IMDb-linked metadata, autocomplete search, group management screens, and per-film like/dislike interactions inside each group.
 
-What makes it still worth keeping around is that it was already trying to solve a real coordination problem, not just display a list. Shared state, recommendation-like voting, chat, and richer browsing all had to fit inside one mobile experience.
+It was already trying to solve a real coordination problem rather than just display a list: shared state, voting, chat, and richer browsing all had to fit inside one mobile experience.

@@ -21,4 +21,4 @@ It also handles a few practical details cleanly: it skips work when LSP or JDTLS
 
 ## Why it matters
 
-This is obviously a small tool, but I like it because it solves a real developer-experience problem with very little surface area. It is a good example of the kind of tooling I enjoy building lately: narrow in scope, immediately useful, and careful about integrating with the environment instead of assuming a blank slate.
+It solves a real developer-experience problem with very little surface area, and it reflects the kind of tooling I enjoy building lately: narrow in scope, immediately useful, and careful about integrating with the environment instead of assuming a blank slate.

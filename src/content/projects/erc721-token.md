@@ -11,4 +11,4 @@ This was an MVP for **Genuino World**, built around the idea of treating a physi
 
 My work focused on the smart-contract layer and the jersey-management side of the application. The contract did more than mint ownership tokens: it also tracked events associated with the jersey, including location-related data intended to help prove that an item had actually been used in a match context.
 
-Around that, the product stack included a React web dashboard for management flows and a React Native / Expo mobile app for the physical verification experience. That combination made the project less about “NFTs” in the collectible sense and more about product identity, provenance, and real-world asset tracking.
+Around that, the product stack included a React web dashboard for management flows and a React Native / Expo mobile app for the physical verification experience. The combination pushed the project toward product identity, provenance, and real-world asset tracking rather than collectible NFTs.

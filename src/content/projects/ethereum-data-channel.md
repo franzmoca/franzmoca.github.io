@@ -11,6 +11,6 @@ Ethereum Data Channel was a research prototype for a simple but important idea: 
 
 The project used WebRTC `RTCDataChannel` connections plus a signaling layer to let participants exchange state updates directly. In the thesis-era implementation, that channel was tied to wallet-oriented flows such as MetaMask-based signing and structured messages, so it could support blockchain applications rather than just generic chat-style messaging.
 
-Its clearest role was as the communication layer for the [Pig state channel game](/projects/pig-blockchain-game), where two players needed to exchange signed updates off-chain before settlement or dispute resolution. In that sense, it was less a standalone product and more an enabling transport layer for state-channel coordination.
+Its clearest role was as the communication layer for the [Pig state channel game](/projects/pig-blockchain-game), where two players needed to exchange signed updates off-chain before settlement or dispute resolution. In practice it was an enabling transport layer for state-channel coordination.
 
-What makes it still interesting is the architecture question it addresses: if the blockchain is the settlement layer, what is the right off-chain channel for the live interaction? This project was my answer at the time.
+The architecture question it addresses is still open: if the blockchain is the settlement layer, what is the right off-chain channel for the live interaction? This project was my answer at the time.

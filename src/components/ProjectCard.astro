@@ -23,10 +23,7 @@ const year = date.getFullYear();
 const media = getProjectMedia(slug);
 ---
 
-<article
-  class="rounded-xl p-5 flex flex-col gap-3 surface-card"
-  style="background: var(--color-bg-card); border: 1px solid var(--color-border); box-shadow: var(--shadow-soft)"
->
+<article class="rounded-xl p-5 flex flex-col gap-3 card surface-card">
   {media && (
     <a
       href={`/projects/${slug}`}
@@ -46,7 +43,7 @@ const media = getProjectMedia(slug);
 
   <div class="flex items-start justify-between gap-2">
     <h3 class="font-semibold text-base leading-snug" style="color: var(--color-text)">
-      <a href={`/projects/${slug}`} class="transition-colors" style="color: inherit">
+      <a href={`/projects/${slug}`} class="text-inherit transition-colors hover:text-accent-strong">
         {title}
       </a>
     </h3>
@@ -72,10 +69,9 @@ const media = getProjectMedia(slug);
     <a
       href={`/projects/${slug}`}
       class="text-xs font-medium flex items-center gap-1 transition-colors"
-      style="color: var(--color-accent-strong)"
     >
-      Read case study
-      <ArrowOut size={11} />
+      Read more
+      <span aria-hidden="true">→</span>
     </a>
 
     {links.length > 0 && (
@@ -85,8 +81,7 @@ const media = getProjectMedia(slug);
           href={url}
           target={url.startsWith('http') ? '_blank' : undefined}
           rel={url.startsWith('http') ? 'noopener noreferrer' : undefined}
-          class="text-xs font-medium flex items-center gap-1 transition-colors hover:text-[var(--color-text)]"
-          style="color: var(--color-text-muted)"
+          class="text-xs font-medium flex items-center gap-1 transition-colors link-muted"
         >
           {label}
           <ArrowOut size={11} />

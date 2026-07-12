@@ -21,7 +21,7 @@ The implementation used technologies such as Bitcore, OrientDB, PHP, Node.js, an
 
 On top of that, the tool exposed filters on block ranges, value, balance, miners, roots, leaves, and related transaction patterns so the graph could be reduced to something a human could actually reason about.
 
-## Why it was interesting
+## The filtering layer
 
 That filtering layer was the real point of the project. Instead of trying to “show the blockchain”, it aimed to surface structures that might matter: clusters of transactions, flows between addresses, and suspicious patterns such as possible mixing behavior.
 

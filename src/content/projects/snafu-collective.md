@@ -17,7 +17,7 @@ I collaborated with an Italian collective of artists experimenting with NFTs and
 
 ## Context
 
-The strongest idea behind Snafu was not “another NFT site”, but a lower-friction marketplace on xDai Chain, now Gnosis Chain, where artists could mint and trade without Ethereum mainnet fees dominating the user experience.
+The idea behind Snafu was a lower-friction marketplace on xDai Chain, now Gnosis Chain, where artists could mint and trade without Ethereum mainnet fees dominating the user experience.
 
 ## What I worked on
 
@@ -27,6 +27,6 @@ The marketplace used ERC1155 to support both unique works and edition-style drop
 
 ## Broader ecosystem
 
-What makes the project more interesting in retrospect is that it was not a one-off demo. The SNAFU organization also published smart-contract infrastructure around the token itself, swap logic, Snapshot governance support, and vesting. It later connected to related work such as **Bored David**, a separate ERC721 collection deployed across multiple chains.
+The project was never a one-off demo. The SNAFU organization also published smart-contract infrastructure around the token itself, swap logic, Snapshot governance support, and vesting. It later connected to related work such as **Bored David**, a separate ERC721 collection deployed across multiple chains.
 
-That broader ecosystem is why I still like this project as a portfolio case study: it sat at the intersection of art tooling, on-chain product design, and the practical reality of shipping around a fast-moving Web3 stack.
+The whole effort sat at the intersection of art tooling, on-chain product design, and the practical reality of shipping around a fast-moving Web3 stack.

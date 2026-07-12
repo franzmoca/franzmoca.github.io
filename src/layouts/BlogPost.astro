@@ -27,14 +27,7 @@ const formattedDate = date.toLocaleDateString('en-US', {
         {tags.length > 0 && (
           <>
             <span>·</span>
-            <div class="flex gap-2 flex-wrap">
-              {tags.map((tag) => (
-                <span class="px-2 py-0.5 rounded text-xs font-mono"
-                  style="background: var(--color-bg-card); border: 1px solid var(--color-border); color: var(--color-text)">
-                  {tag}
-                </span>
-              ))}
-            </div>
+            <span class="text-xs font-mono">{tags.join(' · ')}</span>
           </>
         )}
       </div>

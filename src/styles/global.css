@@ -107,7 +107,54 @@
   }
 }
 
-/* Reusable card hover lift — the one deliberate motion primitive on the site. */
+/* Shared surfaces and controls. Colors must live in classes, not inline `style`
+   attributes: inline styles override every stylesheet rule, which silently kills
+   hover states. */
+@layer components {
+  .card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .btn-primary {
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+  .btn-primary:hover {
+    background: var(--color-accent-hover);
+    color: var(--color-on-accent);
+  }
+
+  .btn-secondary {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+  }
+  .btn-secondary:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text);
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+  }
+  .btn-ghost:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text);
+  }
+
+  .link-muted {
+    color: var(--color-text-muted);
+  }
+  .link-muted:hover {
+    color: var(--color-text);
+  }
+}
+
+/* Reusable card hover lift — the one deliberate motion primitive on the site.
+   Only apply to clickable cards: the lift is a "this is interactive" affordance. */
 .surface-card {
   transition:
     transform 200ms ease,

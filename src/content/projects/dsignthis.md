@@ -19,8 +19,8 @@ The project uses a single `PetitionManager` smart contract to manage registratio
 
 To avoid putting unnecessary data on-chain, petition assets and related content are referenced through IPFS hashes. The repo also includes an ENS-based client-side identity check, which was an interesting usability experiment even if it stayed outside the contract layer.
 
-## Why it mattered
+## What it demonstrated
 
-What makes the project worth keeping in the portfolio is not the petition theme by itself, but the separation of concerns: keep the high-value logic on-chain, move bulky assets off-chain, and still give the user something that feels like a real application rather than a contract demo.
+The lasting value was the separation of concerns: keep the high-value logic on-chain, move bulky assets off-chain, and still give the user something that feels like a real application rather than a contract demo.
 
 It stayed at proof-of-concept level, but it was a good capstone for pulling together Solidity, wallet integration, testing, and basic product design under the constraints of Ethereum tooling at the time.

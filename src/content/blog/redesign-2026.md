@@ -17,7 +17,7 @@ So I finally rebuilt it. The stack is [Astro 6.1](https://astro.build/) with Tai
 
 The main thing I did differently this time was using [Claude Code](https://claude.ai/code), Anthropic's CLI tool, for most of the implementation. I started in plan mode: described what I wanted, answered a few questions about CSS preferences and design direction, and got back a detailed spec before a single file was touched.
 
-The actual build, scaffolding Astro, migrating 13 project posts and 2 old blog posts, creating the layout components, and configuring the GitHub Actions deploy pipeline, took a single session. Claude handled the Astro 6 content layer API quirks (`src/content.config.ts`, `id` instead of `slug`, the new `render()` import) without me having to look anything up.
+The actual build — scaffolding Astro, migrating 13 project posts and 2 old blog posts, creating the layout components, and configuring the GitHub Actions deploy pipeline — took a single session. Claude handled the Astro 6 content layer API quirks (`src/content.config.ts`, `id` instead of `slug`, the new `render()` import) without me having to look anything up.
 
 What worked well:
 - The planning phase caught ambiguities early (how to handle the old portfolio projects, color scheme, contact form vs. no form)

@@ -9,7 +9,7 @@ links:
     url: "/documents/tesi_magistrale.pdf"
 ---
 
-My master's thesis used the dice game [Pig](https://en.wikipedia.org/wiki/Pig_(dice_game)) as a concrete way to study **state channels** for Ethereum. The real subject was not the game itself, but the coordination protocol behind it: how to let two players exchange signed state updates off-chain and only fall back to the blockchain when necessary.
+My master's thesis used the dice game [Pig](https://en.wikipedia.org/wiki/Pig_(dice_game)) as a concrete way to study **state channels** for Ethereum. The real subject was the coordination protocol behind the game: how to let two players exchange signed state updates off-chain and only fall back to the blockchain when necessary.
 
 ## How it works
 
