@@ -113,7 +113,7 @@ import '@fontsource/inter/600.css';
       }
 
       /* ── Experience entries ── */
-      .exp-entry { margin-bottom: 18px; }
+      .exp-entry { margin-bottom: 15px; }
       .exp-row {
         display: flex;
         justify-content: space-between;
@@ -138,6 +138,18 @@ import '@fontsource/inter/600.css';
         color: #555;
         margin-bottom: 7px;
       }
+      .career-roles {
+        margin: 5px 0 8px;
+        display: grid;
+        gap: 2px;
+      }
+      .career-role {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 9.5pt;
+      }
+      .career-role strong { font-weight: 500; color: #333; }
       .exp-body {
         font-size: 9.5pt;
         color: #333;
@@ -236,7 +248,7 @@ import '@fontsource/inter/600.css';
       <!-- Header -->
       <header>
         <h1 class="cv-name">Francesco Moca</h1>
-        <p class="cv-title">Full-Stack Developer &amp; IT Consultant &nbsp;·&nbsp; Milan, Italy</p>
+        <p class="cv-title">Senior Consultant &amp; Full-Stack Developer &nbsp;·&nbsp; Milan, Italy</p>
         <div class="cv-contact">
           <a href="mailto:francesco.moca@gmail.com">francesco.moca@gmail.com</a>
           <a href="https://github.com/franzmoca">github.com/franzmoca</a>
@@ -249,10 +261,10 @@ import '@fontsource/inter/600.css';
       <section class="section">
         <h2 class="section-title">Summary</h2>
         <p class="exp-body" style="margin:0">
-          Full-stack developer and IT consultant with 5+ years of experience delivering enterprise software,
-          including blockchain applications, in regulated and technically complex environments. I work across backend APIs and services, frontend
-          applications, smart contracts, DevOps, and technical analysis, and I am comfortable moving
-          between hands-on implementation, client-facing consulting, team coordination, and architecture support.
+          Senior consultant and full-stack developer with 6+ years of experience delivering enterprise
+          software and blockchain platforms. Contributed to 13+ projects across financial services,
+          energy, insurance, supply chain, payments, and digital entertainment, combining hands-on
+          development with architecture, client-facing consulting, and team coordination.
         </p>
       </section>
 
@@ -263,20 +275,27 @@ import '@fontsource/inter/600.css';
         <div class="exp-entry">
           <div class="exp-row">
             <span class="exp-company">Blockchain Reply</span>
-            <span class="exp-period">Mar 2020 – Present</span>
+            <span class="exp-period">Milan, Italy</span>
           </div>
-          <p class="exp-role">Full-Stack Developer / Senior Consultant &nbsp;·&nbsp; Milan, Italy</p>
+          <div class="career-roles">
+            <div class="career-role">
+              <strong>Senior Consultant</strong>
+              <span class="exp-period">Mar 2023 - Present</span>
+            </div>
+            <div class="career-role">
+              <strong>Consultant</strong>
+              <span class="exp-period">Mar 2020 - Mar 2023</span>
+            </div>
+          </div>
           <div class="exp-body">
-            <p>
-              Designed and delivered 13+ enterprise projects for clients in financial services, energy,
-              insurance, supply chain, payments, and digital entertainment. My role has varied by phase:
-              full-stack developer, technical lead, on-site consultant, and architecture support.
-            </p>
             <ul>
-              <li>Built smart contracts in <strong>Solidity</strong>, <strong>Go chaincode</strong>, and <strong>PyTeal</strong> across Polygon, Hyperledger Besu, Hyperledger Fabric, R3 Corda, and Algorand — tokenization platforms, digital-asset lifecycle management, custody-integrated flows, and blockchain gateways.</li>
-              <li>Delivered backends and integration layers in <strong>Java / Spring Boot</strong>, <strong>Go</strong>, and <strong>Python</strong>, plus frontends with <strong>Vue.js 2/3</strong>, <strong>React</strong>, and <strong>Next.js</strong> — operational dashboards, marketplaces, tokenisation portals, and exchange interfaces.</li>
-              <li>Ran infrastructure and operations on <strong>Kubernetes</strong>, <strong>AWS</strong>, <strong>Terraform</strong>, <strong>CloudFormation</strong>, and <strong>Serverless Framework</strong>, including Hyperledger Fabric orchestration and custody integrations with <strong>Gnosis Safe</strong> and <strong>Fireblocks</strong>.</li>
-              <li>Curated delivery beyond implementation: CI/CD pipelines with <strong>Jenkins</strong>, <strong>GitLab CI</strong>, and <strong>GitHub Actions</strong>, plus technical analysis, architecture documentation, client workshops, migration planning, mentoring junior developers, and pre-sales support.</li>
+              <li>Led teams of 3-5 developers delivering multi-component digital-asset platforms built on microservice-based backends and multiple frontend applications; the largest served up to 1,000 customers and supported more than €500k in transaction value.</li>
+              <li>Developed backend services and integration layers in <strong>Java / Spring Boot</strong>, <strong>Go</strong>, and <strong>Python</strong>, and frontend applications in <strong>Vue.js</strong>, <strong>React</strong>, and <strong>Next.js</strong>.</li>
+              <li>Built smart contracts and blockchain components for tokenization, asset lifecycle management, custody-integrated workflows, and interoperability across public and permissioned networks.</li>
+              <li>Designed cloud infrastructure and automated delivery workflows across <strong>AWS</strong>, <strong>Oracle Cloud</strong>, and <strong>Azure</strong> using Kubernetes, Terraform, and CI/CD pipelines.</li>
+              <li>Implemented an internal agentic pipeline to assist pull request reviews through automated repository analysis and structured feedback.</li>
+              <li>Prepared technical analyses and architecture documentation, facilitated client workshops, and supported application and infrastructure migrations.</li>
+              <li>Mentored 2-3 junior developers and collaborated on several pre-sales proposals, defining technical solutions, scope, and delivery estimates.</li>
             </ul>
           </div>
         </div>
@@ -284,7 +303,7 @@ import '@fontsource/inter/600.css';
         <div class="exp-entry">
           <div class="exp-row">
             <span class="exp-company">Freelance Developer</span>
-            <span class="exp-period">Sep 2016 – Feb 2020</span>
+            <span class="exp-period">Sep 2016 - Feb 2020</span>
           </div>
           <p class="exp-role">Freelance Full-Stack / Mobile Developer &nbsp;·&nbsp; Remote</p>
           <div class="exp-body">
@@ -303,12 +322,10 @@ import '@fontsource/inter/600.css';
         <table class="skills-table">
           <tbody>
             <tr><td>Languages</td><td>Java · Go · Python · TypeScript · JavaScript · Solidity · PyTeal</td></tr>
-            <tr><td>Backend</td><td>Spring Boot · Hibernate · Go · Python · Node.js · Keycloak · Serverless Framework</td></tr>
-            <tr><td>Frontend</td><td>Vue.js 2/3 · React · Next.js · React Native · Quasar · Vuetify · Ionic</td></tr>
+            <tr><td>Applications</td><td>Spring Boot · Vue.js · React · Next.js · React Native · Kotlin Multiplatform · Node.js</td></tr>
             <tr><td>Blockchain</td><td>Ethereum / EVM · Algorand · Hyperledger Fabric · Hyperledger Besu · R3 Corda · Polygon · Gnosis Safe · Fireblocks</td></tr>
-            <tr><td>Infrastructure</td><td>Kubernetes · AWS (ECS, EKS, Lambda) · Terraform · CloudFormation · Jenkins · GitLab CI · GitHub Actions · Ansible · Docker</td></tr>
-            <tr><td>Data</td><td>PostgreSQL</td></tr>
-            <tr><td>Delivery</td><td>Technical analysis · Architecture documentation · Client workshops · Team coordination · Mentoring · Pre-sales support</td></tr>
+            <tr><td>Cloud &amp; delivery</td><td>AWS · Oracle Cloud · Azure · Kubernetes · Terraform · CloudFormation · Docker · Jenkins · GitLab CI · GitHub Actions</td></tr>
+            <tr><td>Developer tooling</td><td>Coding agents · Agentic code review · LLM-assisted development · Specification-driven workflows</td></tr>
           </tbody>
         </table>
       </section>
@@ -319,27 +336,18 @@ import '@fontsource/inter/600.css';
         <div class="edu-entry">
           <div class="edu-row">
             <span class="edu-degree">Master's Degree in Computer Science (Software Techniques)</span>
-            <span class="exp-period">2016 – 2019</span>
+            <span class="exp-period">2016 - 2019</span>
           </div>
-          <p class="edu-school">University of Bologna &nbsp;·&nbsp; <strong>110/110 con lode</strong></p>
-          <p class="edu-note">
-            Thesis: <em>Pig: A State Channel Game on Ethereum</em>. Implemented the dice game Pig as a
-            trustless Layer 2 application using counterfactual instantiation: players exchange signed
-            state updates off-chain and settle only the final outcome on-chain, reducing blockchain
-            interactions to two transactions per game regardless of length.
-          </p>
+          <p class="edu-school">University of Bologna &nbsp;·&nbsp; <strong>110/110 cum laude</strong></p>
+          <p class="edu-note">Thesis: <em>Pig: A State Channel Game on Ethereum</em></p>
         </div>
         <div class="edu-entry">
           <div class="edu-row">
             <span class="edu-degree">Bachelor's Degree in Computer Science</span>
-            <span class="exp-period">2013 – 2016</span>
+            <span class="exp-period">2013 - 2016</span>
           </div>
           <p class="edu-school">University of Perugia &nbsp;·&nbsp; <strong>105/110</strong></p>
-          <p class="edu-note">
-            Thesis: <em>Blockchain: gestione di Big Data</em>. Analysis of the Bitcoin blockchain as a
-            large-scale distributed data structure, with an interactive force-directed visualisation
-            of transaction graphs built in D3.js to explore value-flow patterns between addresses.
-          </p>
+          <p class="edu-note">Thesis: <em>Blockchain: gestione di Big Data</em></p>
         </div>
       </section>
 
@@ -364,7 +372,7 @@ import '@fontsource/inter/600.css';
             </div>
             <div class="lang-entry">
               <span class="lang-name">English</span>
-              <span class="lang-level">Professional proficiency &mdash; advanced written, intermediate spoken</span>
+              <span class="lang-level">Professional working proficiency</span>
             </div>
           </div>
         </div>

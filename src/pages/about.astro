@@ -5,9 +5,9 @@ import Download from '../components/icons/Download.astro';
 const skills = {
   'Languages': ['Java', 'Go', 'Python', 'TypeScript', 'JavaScript', 'Solidity', 'PyTeal'],
   'Backend': ['Spring Boot', 'Hibernate', 'Node.js', 'Go', 'Python', 'Keycloak', 'Serverless Framework'],
-  'Frontend': ['Vue.js', 'React', 'Next.js', 'React Native', 'Quasar', 'Vuetify', 'Ionic'],
+  'Frontend & Mobile': ['Vue.js', 'React', 'Next.js', 'React Native', 'Kotlin Multiplatform', 'Quasar', 'Vuetify', 'Ionic'],
   'Blockchain': ['Ethereum / EVM', 'Algorand', 'Hyperledger Fabric', 'Hyperledger Besu', 'R3 Corda', 'Polygon', 'Gnosis Safe', 'Fireblocks'],
-  'Infrastructure': ['Kubernetes', 'AWS (ECS, EKS, Lambda)', 'Terraform', 'CloudFormation', 'Jenkins', 'GitLab CI', 'GitHub Actions', 'Ansible', 'Docker'],
+  'Infrastructure': ['Kubernetes', 'AWS (ECS, EKS, Lambda)', 'Oracle Cloud', 'Azure', 'Terraform', 'CloudFormation', 'Jenkins', 'GitLab CI', 'GitHub Actions', 'Ansible', 'Docker'],
   'Data': ['PostgreSQL'],
 };
 ---
@@ -20,37 +20,37 @@ const skills = {
     <header class="mb-12">
       <h1 class="text-3xl font-semibold mb-3" style="color: var(--color-text)">About</h1>
       <p class="text-base max-w-xl" style="color: var(--color-text-muted)">
-        What keeps me interested is the messy part of software — the side most tools quietly avoid.
+        I work on full-stack software, blockchain systems, and the practical challenges of delivering
+        enterprise projects.
       </p>
     </header>
 
     <div class="flex flex-col gap-6 text-base leading-relaxed" style="color: var(--color-text-muted)">
       <p>
-        Compliance constraints, operational complexity, awkward user flows, production incidents,
-        team coordination, and the need to keep the whole thing understandable for the next person
-        touching it: that is where most of my work actually lives. The code is the easy part.
-      </p>
-      <p>
-        I am Francesco, a full-stack developer and IT consultant working at
+        I’m Francesco, a full-stack developer and IT consultant at
         <strong style="color: var(--color-text)">Blockchain Reply</strong>. Over the past five
-        years I have helped deliver enterprise software — much of it blockchain-based — for
+        years, I have helped deliver enterprise software, much of it blockchain-based, for
         clients in finance, energy, insurance, supply chain, and payments. Depending on the
-        phase I might be writing code, shaping a solution with the client, supporting delivery,
-        or helping a team keep architecture and implementation aligned.
+        project phase, my role may include hands-on development, technical analysis, solution design,
+        client workshops, team coordination, or architecture support.
       </p>
       <p>
-        Technically, that has meant Java / Spring Boot backends, Go and Python services, Vue,
-        React, and Next.js frontends, and smart contracts in Solidity, Go chaincode, and PyTeal
-        across EVM chains, Hyperledger Fabric, Hyperledger Besu, R3 Corda, and Algorand. On the
-        delivery side, it has meant Kubernetes on AWS, Terraform and CloudFormation, and CI/CD
-        through Jenkins, GitLab CI, and GitHub Actions, plus custody tooling like Gnosis Safe
-        and Fireblocks when the client needed it.
+        My technical work spans Java and Spring Boot backends, Go and Python services, Vue, React,
+        and Next.js frontends, and smart contracts written in Solidity, Go chaincode, and PyTeal.
+        I have worked with EVM networks, Hyperledger Fabric, Hyperledger Besu, R3 Corda, and Algorand,
+        as well as custody solutions including Gnosis Safe and Fireblocks.
       </p>
       <p>
-        Before Reply, I wrote a master's thesis on Ethereum state channels, finished the
-        ConsenSys Academy bootcamp, and built a mix of freelance blockchain and mobile projects.
-        More recently I have been poking at smaller experiments around LLMs, coding agents,
-        and small developer tools.
+        I also work on infrastructure and delivery processes, including Kubernetes on AWS,
+        Terraform, CloudFormation, and CI/CD pipelines built with Jenkins, GitLab CI, and GitHub
+        Actions. I’m particularly interested in the operational side of software: keeping systems
+        maintainable while accounting for compliance requirements, production constraints, and the
+        needs of different teams.
+      </p>
+      <p>
+        Before joining Reply, I completed a master’s thesis on Ethereum state channels and built a
+        mix of freelance blockchain and mobile projects.
+        More recently, I have been experimenting with LLMs, coding agents, and developer tooling.
       </p>
     </div>
 
@@ -71,9 +71,9 @@ const skills = {
 
     <!-- Skills -->
     <div class="mt-12">
-      <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">Tools I reach for</h2>
+      <h2 class="text-lg font-semibold mb-3" style="color: var(--color-text)">Selected technologies</h2>
       <p class="text-sm mb-6" style="color: var(--color-text-muted)">
-        Not exhaustive, but a fair picture of the platforms and tools I have used most often in recent years.
+        This is not an exhaustive list, but it covers the platforms and tools I have used most often in recent years.
       </p>
       <div class="flex flex-col gap-5">
         {Object.entries(skills).map(([category, items]) => (

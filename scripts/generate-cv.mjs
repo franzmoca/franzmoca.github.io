@@ -4,12 +4,12 @@
  * captures it with puppeteer, and writes the PDF to public/documents/cv.pdf
  *
  * Usage: node scripts/generate-cv.mjs
- * (runs `astro build` first if dist/ is missing)
+ * (runs `astro build` before every capture)
  */
 
 import puppeteer from 'puppeteer';
 import { createServer } from 'http';
-import { readFile, access, mkdir } from 'fs/promises';
+import { readFile, mkdir } from 'fs/promises';
 import { resolve, extname, join } from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
@@ -20,14 +20,10 @@ const distDir = join(root, 'dist');
 const outputDir = join(root, 'public', 'documents');
 const outputPath = join(outputDir, 'cv.pdf');
 
-// ── Ensure dist exists ──────────────────────────────────────────────────────
+// ── Build the latest CV ─────────────────────────────────────────────────────
 
-try {
-  await access(distDir);
-} catch {
-  console.log('No dist/ found — running astro build first...');
-  execSync('npm run build', { cwd: root, stdio: 'inherit' });
-}
+console.log('Building the site before generating the CV...');
+execSync('npm run build', { cwd: root, stdio: 'inherit' });
 
 // ── Minimal static file server ──────────────────────────────────────────────
 
@@ -116,6 +112,7 @@ await mkdir(outputDir, { recursive: true });
 await page.pdf({
   path: outputPath,
   format: 'A4',
+  scale: 0.8,
   printBackground: true,
   margin: { top: '16mm', right: '16mm', bottom: '16mm', left: '16mm' },
   displayHeaderFooter: false,
